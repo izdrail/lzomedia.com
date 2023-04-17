@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About Stefan (@LzoMedia)" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="https://i.imgur.com/ORy5HLT.jpg"
+					alt="Stefan"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Hello there! I'm Stefan, a software developer from Romania currently living in United kingdom
+						with a passion for building enterprise applications. I've been in the game for over 13 years
+						now, and let me tell you,
+						I've seen some things. But nothing gets me more excited than tackling a client's problem
+						head-on and choosing the best programming language to get the job done.
+					</p>
+					<br>
+					<p>
+						I mean, who doesn't love a good challenge, right? It's like trying to solve a Rubik's Cube,
+						but with code. And let me tell you, after staring at lines of code for hours on end, sometimes
+						a puzzle is exactly what I need to shake things up and get my brain going again.
+					</p>
+					<br>
+					<p>
+						But don't let my love for puzzles fool you - I take my work seriously. I believe that every
+						project is an opportunity to learn and grow as a developer, and I always strive to deliver the
+						best possible solution to my clients. Whether it's with PHP, Python, or some other programming
+						language, I'm always up for a good challenge and a chance to flex my coding muscles.
+					</p>
+					<br>
+					<p>
+						So if you're looking for a developer who's not afraid to roll up their sleeves and dive
+						headfirst into a coding problem, look no further. I'm your guy (or gal, if you prefer).
+						Let's tackle your next project together and see what we can accomplish!
+
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>
+						<strong>University of Bucharest</strong>
+						<br />
+						<span>Computer Science</span>
+						<br />
+						<span>2010 - 2014</span>
+
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<ul>
+						<li>
+							PHP - spanning over 13 years of experience
+						</li>
+						<li>
+							Python - 4 years of experience
+						</li>
+						<li>
+							IoT
+						</li>
+
+						<li>
+							NLP & AI
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
