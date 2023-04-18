@@ -19,19 +19,24 @@ const projects = (await getCollection('blog')).sort(
 	description="My thoughts on web development, design, and more."
 >
 	<div class="stack gap-20">
+
 		<main class="wrapper stack gap-12">
 			<Hero
 				title="My Blog"
 				tagline="My thoughts on web development, design, and more."
 				align="center"
 			/>
-			<div class="mx-auto grid grid-cols-2 bg-zinc-50 p-1">
-				{
-					projects.map((project) => (
-						<BlogPreview project={project} />
-					))
-				}
-			</div>
+			<section class="dark:bg-gray-900">
+				<div class="container px-6 py-10 mx-auto">
+					<div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-1">
+						{
+							projects.map((project) => (
+								<BlogPreview project={project} />
+							))
+						}
+					</div>
+				</div>
+			</section>
 		</main>
 		<ContactCTA />
 	</div>

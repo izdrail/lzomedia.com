@@ -8,22 +8,16 @@ interface Props {
 const {data, slug} = Astro.props.project;
 ---
 
-
-<div class="sm:col-span-4 rounded-lg border border-gray-500 bg-gray-200 p-32">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={data.img}
+<div class="lg:flex">
+    <img class="object-cover w-full h-32 rounded-lg lg:w-64" src={data.img}
          alt={data.img_alt || ''} loading="lazy" decoding="async" alt="">
-</div>
-<div class="sm:col-span-8 rounded-lg border border-gray-400 bg-gray-200 p-16">
-    <h3 class="font-black text-gray-800 md:text-3xl text-xl">
-        <a href={`/blog/${slug}`}
-           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
 
+    <div class="flex flex-col lg:mx-6">
+        <a href={`/blog/${slug}`} class="text-xl font-semibold text-white-800 hover:underline dark:text-black ">
             {data.title}
         </a>
-    </h3>
-    <p class="md:text-lg text-gray-500 text-base">
-        {data.description}
-    </p>
+        <p>
+            {data.description}
+        </p>
+    </div>
 </div>
-
-
