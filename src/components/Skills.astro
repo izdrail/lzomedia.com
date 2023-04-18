@@ -8,18 +8,32 @@ import { Markup, Markdown } from 'astro-remote';
 
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+		<h2>
+			<Markdown>
+				Software Development
+			</Markdown>
+		</h2>
+		<p>
+			I'm a full-stack developer with a focus on back-end development. I have experience with PHP and Python.
+		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+		<h2>
+			<Markdown>
+				Competitive Coding
+			</Markdown>
+		</h2>
+		<p>
+			I'm a competitive programmer with a 5-star rating on CodeChef. I have participated in many coding competitions and have won many prizes.
+		</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+		<p>
+			I'm a strategy-minded person. I like to think about the big picture and how things work together. I'm always looking for ways to improve things.
+		</p>
 	</div>
 </section>
 
@@ -39,7 +53,7 @@ import { Markup, Markdown } from 'astro-remote';
 	}
 
 	.skills h2 {
-		font-size: var(--text-lg);
+		font-size: var(--text-md);
 	}
 
 	.skills p {

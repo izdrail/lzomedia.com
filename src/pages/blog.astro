@@ -1,70 +1,42 @@
 ---
 import { getCollection } from 'astro:content';
-import { Link } from '@astrojs/renderer-react'
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+
+import BlogPreview from '../components/BlogPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
-import { Markup, Markdown } from 'astro-remote';
-import {Octokit} from "octokit";
 
-const octokit = new Octokit({
-	auth: import.meta.env.GITHUB_TOKEN
-})
-
-
-
-const content = await octokit.request('GET /users/cornatul/gists', {
-	headers: {
-		'X-GitHub-Api-Version': '2022-11-28'
-	}
-}).then(res => res);
-
-const projects = content.data.map(project => {
-
-	let content ={
-		id: project.id,
-		url: project.url,
-		content:   Object.keys(project.files).map(key => (
-			{
-				filename: project.files[key].filename,
-				type: project.files[key].type,
-				language: project.files[key].language,
-				raw_url: project.files[key].raw_url,
-			}
-		))
-	}
-
-	console.log(content)
-	return content;
-})
-
-
-
+const projects = (await getCollection('blog')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
 ---
 
-<BaseLayout title="Blog" description="My thogts on technology and more">
+<BaseLayout
+	title="Blog - Lzo Media"
+	description="My thoughts on web development, design, and more."
+>
 	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero title="Blog" />
-			<Grid>
 
-				<ul>
-				{projects.map(project => (
-					<li>
-						<a href={`blog/${project.id}`}>
-							{project.content.map(file => (
-								<Markdown>{file.filename}</Markdown>
-							))}
-						</a>
-
-					</li>
-				))}
-				</ul>
-			</Grid>
+		<main class="wrapper stack gap-12">
+			<Hero
+				title="My Blog"
+				tagline="My thoughts on web development, design, and more."
+				align="center"
+			/>
+			<section class="dark:bg-gray-900">
+				<div class="container px-6 py-10 mx-auto">
+					<div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-1">
+						{
+							projects.map((project) => (
+								<BlogPreview project={project} />
+							))
+						}
+					</div>
+				</div>
+			</section>
 		</main>
 		<ContactCTA />
 	</div>

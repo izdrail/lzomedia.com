@@ -9,6 +9,7 @@ interface Props {
 const {
 	title = 'Senior Software Engineer London, UK',
 	description = 'I am a Senior Software Engineer based in London, UK. I have a passion for building performant, accessible and maintainable web applications.',
+	logo = '/assets/logo.svg',
 } = Astro.props;
 ---
 
@@ -22,8 +23,8 @@ const {
 <meta property="og:site_name" content={title}>
 <meta property="og:url" content=https://cornatul.com>
 <meta property="og:description" content={description}>
-<meta property="og:type" content=profile>
-<meta property="og:image" content="">
+<meta property="og:type" content="profile">
+<meta property="og:image" content={logo}>
 
 
 <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
