@@ -13,9 +13,11 @@ const {data, slug} = Astro.props.project;
          alt={data.img_alt || ''} loading="lazy" decoding="async" alt="">
 
     <div class="flex flex-col lg:mx-6">
-        <a href={`/blog/${slug}`} class="text-xl font-semibold text-white-800 hover:underline dark:text-black ">
-            {data.title}
-        </a>
+        <h3>
+            <a href={`/blog/${slug}`} class="text-xl font-semibold text-white-800 hover:underline dark:text-black ">
+                {data.title}
+            </a>
+        </h3>
         <p>
             {data.description}
         </p>

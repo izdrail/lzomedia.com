@@ -2,9 +2,9 @@
 title: Laravel Design Patterns
 publishDate: 2020-03-02 00:00:00
 img: https://laravelnews.s3.amazonaws.com/images/laravel-featured.png?w=1366&h=683&q=90&auto=format&fit=crop
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Laravel Design Patterns
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  Laravel’s use of design patterns is one of the key reasons for its popularity and success. By leveraging well-established patterns, Laravel provides a consistent and scalable approach to web development. 
 tags:
   - Laravel
   - PHP
