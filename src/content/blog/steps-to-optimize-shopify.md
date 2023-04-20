@@ -13,7 +13,6 @@ tags:
 
 # Shopify SEO for Multilingual Stores: How to Reach a Global Audience
 
-![Shopify SEO for Multilingual Stores - How to Reach a Global Audience](https://i.imgur.com/JAKQgrq.jpg)
 
 Shopify is a popular e-commerce platform used by online store owners to create, manage and grow their businesses. With its ease of use and robust features, it is a great choice for entrepreneurs looking to reach a global audience.
 
