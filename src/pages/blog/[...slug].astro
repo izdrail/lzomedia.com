@@ -33,7 +33,7 @@ const { Content } = await entry.render();
 			<header>
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/blog/"><Icon icon="arrow-left" /> Blog</a>
-					<Hero title={entry.data.title} align="start">
+					<Hero title={entry.data.title} class="text-lg" align="start">
 						<div class="details">
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
@@ -45,7 +45,7 @@ const { Content } = await entry.render();
 			<main class="wrapper">
 				<div class="stack gap-10 content">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
-					<div class="content">
+					<div class="content text-xl">
 						<Content />
 					</div>
 				</div>
