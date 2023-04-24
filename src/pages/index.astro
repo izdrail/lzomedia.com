@@ -16,6 +16,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 
 // Page section components
 import Skills from '../components/Skills.astro';
+import Testimonials from '../components/Testimonials.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
@@ -87,6 +88,8 @@ const projects = (await getCollection('work'))
 
 		</div>
 
+
+
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -117,6 +120,9 @@ const projects = (await getCollection('work'))
 
 			</section>
 		</main>
+
+		<Testimonials />
+
 	</div>
 </BaseLayout>
 
