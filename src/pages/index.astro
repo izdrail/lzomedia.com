@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import type {CollectionEntry} from 'astro:content';
 
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
@@ -17,8 +16,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 // Page section components
 import Skills from '../components/Skills.astro';
 import Testimonials from '../components/Testimonials.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
+
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -34,7 +32,7 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Stefan."
-					tagline="I am a Backend Developer who is currently based in London, United kingdom."
+					tagline="Seeking a top-notch Laravel developer for hire in London? Look no further! 🚀 With expert skills in Laravel, I bring your web dreams to life."
 					align="start"
 				>
 					<div class="roles">
@@ -43,16 +41,24 @@ const projects = (await getCollection('work'))
 								<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
 							</svg>
 
-							Engineer</Pill>
+							#Laravel Developer</Pill>
 						<Pill><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
 						</svg>
-							Software Specialist </Pill>
+							#LondonHire </Pill>
+
+						<Pill>
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+							</svg>
+							#WebDevelopment</Pill>
+
 						<Pill>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
 						</svg>
 							Hardware enthusiast</Pill>
+
 					</div>
 				</Hero>
 
@@ -60,15 +66,14 @@ const projects = (await getCollection('work'))
 					alt="Stefan aka @cornatul"
 					style="box-shadow: none !important;aspect-ratio: 3/3;"
 					height="620"
-					src="/assets/logo.svg"
+					src="https://i.imgur.com/ORy5HLT.jpg"
 				/>
 			</header>
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Skills</h2>
 					<p>
-						I have a wide range of skills and experience in software development industry.
-						I have worked with a variety of languages and frameworks, and I am always looking to learn more.
+						🔥 London's Multitalented Laravel Developer with a Dash of Magic! 🎩💼 Proficient in PHP, Python, and DevOps, I weave seamless web solutions that defy expectations. 🌐 From elegant Laravel applications to cutting-edge Python scripts, I've got the skills to mesmerize your audience. 🚀
 					</p>
 				</header>
 
