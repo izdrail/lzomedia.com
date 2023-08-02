@@ -110,13 +110,22 @@ const { title, description } = Astro.props;
 			}
 		</style>
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLKB1ZVQRX"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-242653280-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 
-			gtag('config', 'G-KLKB1ZVQRX');
+			gtag('config', 'UA-242653280-1');
+		</script>
+		<script>
+			(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+				w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+					m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://marketing.lzomedia.com/mtc.js','mt');
+
+			mt('send', 'pageview');
 		</script>
 	</body>
 </html>
