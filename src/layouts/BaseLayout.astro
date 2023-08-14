@@ -128,7 +128,16 @@ const { title, description } = Astro.props;
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW5J7LZ"
                           height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
+        <script>
+            document.getElementById('clickMe').addEventListener('click', function() {
+                // Send an event to Google Analytics when the link is clicked
+                gtag('event', 'link_click', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Click on Link',
+                    'event_value': 1 // You can use this to track a numerical value associated with the event
+                });
+            });
+        </script>
         <!-- Mautic (gtag.js) -->
 
 
