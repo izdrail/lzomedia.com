@@ -22,7 +22,7 @@ Introducing... drumroll... feature flags! 🎉 These magical tools allow you to 
 
 But wait, there's more! 😉 By using feature flags, you can also expose your work to your customers earlier, getting feedback and iterating faster. It's like having a built-in focus group! 🤓
 
-Now, I know what you're thinking... "But Ben, won't my customers hate me if I release half-baked features?" 😳 Fear not, my friends! Most product teams mistakenly believe that features must be fully polished before they can be shown to users. But let's be real, users just want to get work done! 🙅‍♂️ So, ship it and then continue to iterate. It's like a never-ending party! 🎉
+Now, I know what you're thinking... "But Stefan, won't my customers hate me if I release half-baked features?" 😳 Fear not, my friends! Most product teams mistakenly believe that features must be fully polished before they can be shown to users. But let's be real, users just want to get work done! 🙅‍♂️ So, ship it and then continue to iterate. It's like a never-ending party! 🎉
 
 In conclusion, feature flags are not just a technical tool, but a psychological hack that can boost your productivity and make you feel like a rockstar developer! 💥 So, go forth and atomize your journey, my friends! 💪🏽🚀
 
