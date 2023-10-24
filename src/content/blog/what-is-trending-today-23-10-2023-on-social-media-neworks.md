@@ -1,7 +1,7 @@
 ---
 title: Learn what is trending today on social media networks today 24 october 2023
 publishDate: 2023-24-10 00:00:00
-img: public/images/trends.jpg
+img: ../../assets/blog/trends.jpg
 img_alt: trends
 description: |
   Learn what is trending today on social media networks today 24 october 2023. Learn what is trending on LinkedIn, Twitter, Facebook, YouTube.
