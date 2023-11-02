@@ -6,12 +6,12 @@ import ThemeToggle from './ThemeToggle.astro';
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/' },
 	{ label: 'About', href: '/about/' },
-	{ label: 'Blog', href: '/blog/' },
+	{ label: 'Blog', href: 'https://blog.lzomedia.com' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
-	{ label: 'Twitter', href: 'https://linkedin.com/in/cornatul', icon: 'linkedin-logo' },
+	{ label: 'LinkedIn', href: 'https://linkedin.com/in/cornatul', icon: 'linkedin-logo' },
 	{ label: 'Twitter', href: 'https://twitter.com/cornatul', icon: 'twitter-logo' },
 	{ label: 'GitHub', href: 'https://github.com/cornatul', icon: 'github-logo' },
 	{ label: 'Twitch', href: 'https://twitch.tv/cornatul', icon: 'twitch-logo' },
@@ -50,6 +50,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 								},
 							]}
 							href={href}
+                            target="_blank"
 						>
 							{label}
 						</a>
