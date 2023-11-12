@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle.astro';
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/' },
 	{ label: 'About', href: '/about/' },
-	{ label: 'Blog', href: 'https://blog.lzomedia.com' },
+	{ label: 'Blog', href: '/blog/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -50,7 +50,6 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 								},
 							]}
 							href={href}
-                            target="_blank"
 						>
 							{label}
 						</a>
