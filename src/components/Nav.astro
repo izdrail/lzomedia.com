@@ -3,10 +3,10 @@ import Icon, { Props as IconProps } from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 
 /** Main menu items */
-const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'About', href: '/about/' },
-	{ label: 'Blog', href: '/blog/' },
+const textLinks: { label: string; href: string, title:string }[] = [
+	{ label: 'Home', href: '/', title: "Laravel Developer" },
+	{ label: 'About', href: '/about/', title: "About me as a laravel developer" },
+	{ label: 'Blog', href: '/blog/', title: "My thoughts on laravel developing" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -37,7 +37,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 	<div id="menu-content">
 		<ul class="nav-items">
 			{
-				textLinks.map(({ label, href }) => (
+				textLinks.map(({ label, href,title }) => (
 					<li>
 						<a
 							aria-current={Astro.url.pathname === href}
@@ -49,6 +49,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 										(href !== '/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
+							title={title}
 							href={href}
 						>
 							{label}
@@ -61,7 +62,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			<div class="socials">
 				{
 					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} target="_blank" class="social">
+						<a href={href} title={label} target="_blank" class="social">
 							<span class="sr-only">{label}</span>
 							<Icon icon={icon} />
 						</a>

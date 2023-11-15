@@ -8,14 +8,14 @@ interface Props {
 const { data, slug } = Astro.props.project;
 ---
 
-<a class="card" href={`/work/${slug}`}>
+<a class="card" title={data.title} href={`/work/${slug}`}>
 	<span class="title">
 		{data.title}
 	</span>
 	<small class="inline-block align-middle text-white px-5 py-5">
 		{data.description}
 	</small>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+	<img src={data.img} alt={data.title || ''} loading="lazy" decoding="async" />
 </a>
 
 <style>
