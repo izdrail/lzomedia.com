@@ -4,9 +4,9 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
+import CoursePreview from "../components/CoursePreview.astro";
 
 const projects = (await getCollection('courses')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -14,21 +14,21 @@ const projects = (await getCollection('courses')).sort(
 ---
 
 <BaseLayout
-	title="My Works Senior Developer | Stefan "
-	description="Learn about my work as a Senior Developer and see my most recent projects below to get an idea of my past experience."
+	title="Free programming courses and tutorials - Laravel Developer"
+	description="Free programming courses and tutorials - Laravel Developer - Learn how to build websites and web applications using PHP, Laravel, Vue, Tailwind CSS, and more!"
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="Free Courses and Tutorials"
+				tagline="Learn how to build websites and web applications using PHP, Laravel, Vue, Tailwind CSS, and more!"
 				align="start"
 			/>
 			<Grid variant="offset">
 				{
 					projects.map((project) => (
 						<li>
-							<PortfolioPreview project={project} />
+							<CoursePreview project={project} />
 						</li>
 					))
 				}

@@ -1,5 +1,5 @@
-
-up:
+#!/bin/sh
+dev:
 	astro dev
 
 build:
