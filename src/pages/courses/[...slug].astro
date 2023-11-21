@@ -9,14 +9,11 @@ import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 
 interface Props {
-	entry: CollectionEntry<'blog'>;
+	entry: CollectionEntry<'courses'>;
 }
 
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const work = await getCollection('blog');
+	const work = await getCollection('courses');
 	return work.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry },
@@ -32,8 +29,8 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/blog/"><Icon icon="arrow-left" /> Blog</a>
-					<Hero title={entry.data.title} class="text-lg" align="start">
+					<a class="back-link" href="/courses/"><Icon icon="arrow-left" /> Courses</a>
+					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
@@ -43,7 +40,7 @@ const { Content } = await entry.render();
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="stack gap-10 content">
+				<div class="">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content text-xl">
 						<Content />
@@ -85,7 +82,8 @@ const { Content } = await entry.render();
 	}
 
 	.content {
-		max-width: 85ch;
+		max-width: 65ch;
+		margin-inline: auto;
 	}
 
 	.content > :global(* + *) {

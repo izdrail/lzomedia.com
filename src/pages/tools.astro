@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+
+import Hero from '../components/Hero.astro';
+
+
+function handleSubmit(event) {
+	event.preventDefault();
+
+	const formData = new FormData(event.target);
+	const websiteUrl = formData.get('website_url');
+
+	// Replace 'your-api-endpoint' with the actual URL
+	const apiUrl = 'your-api-endpoint';
+
+	fetch(apiUrl, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({ website_url: websiteUrl }),
+	})
+		.then(response => response.text())
+		.then(htmlResponse => {
+			// Replace 'result-view' with the ID or class of the element where you want to display the response
+			const resultView = document.getElementById('result-view');
+			if (resultView) {
+				resultView.innerHTML = htmlResponse;
+			}
+		})
+		.catch(error => console.error('Error:', error));
+}
+---
+
+<BaseLayout
+	title="Seo Tools - Free to use seo tools"
+	description="Best free seo tools for your website."
+>
+	<div class="stack gap-20">
+
+		<main class="wrapper stack gap-12">
+			<Hero
+				title="Seo Tools - Free to use seo tools"
+				tagline="Best free seo tools for your website."
+				align="center"
+			/>
+			<section class="dark:bg-gray-900">
+				<div class="container px-6 py-10 mx-auto">
+					<div class="grid grid-cols-1 gap-8 md:grid-cols-1">
+						<p>
+							Seo Tools is a collection of free tools to help you improve your website's SEO. We have tools for checking your website's SEO score, checking your website's speed, checking your website's backlinks, and more.
+						</p>
+						<p>
+							We are constantly adding new tools to help you improve your website's SEO. If you have any suggestions for new tools, please let us know.
+						</p>
+						<h2>
+							Free Seo Audit
+						</h2>
+						<form on:submit={handleSubmit}>
+							<div>
+								<label for="website_url" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+									Website URL
+								</label>
+								<input type="text" id="website_url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Website URL" required>
+							</div>
+							<div class="mt-5">
+								<button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

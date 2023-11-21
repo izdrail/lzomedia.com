@@ -1,10 +1,10 @@
 ---
-title: News AI - Project
+title: Today Intel - Find the latest trends on social media
 publishDate: 2020-03-02 00:00:00
 img: https://i.imgur.com/QrnTmX9.png
-img_alt: news ai
+img_alt: today intel
 description: |
-  News AI is a groundbreaking project that harnesses the power of artificial intelligence to simplify the process of content creation and sharing. 
+  Today Intel is a web application that allows you to find the latest trends on social media. 
 tags:
   - Laravel
   - Fast Api
@@ -17,7 +17,7 @@ tags:
 ---
 
 
-## What is News AI?
+## What is Today Intel?
 News AI is a groundbreaking project
 that harnesses the power of artificial intelligence to simplify the process of content creation and sharing.
 With News AI, you can easily extract and rewrite articles from RSS feeds and distribute them across multiple channels,
