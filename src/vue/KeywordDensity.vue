@@ -79,10 +79,10 @@ console.log('seo-analyzer.vue')
 
 
 export default {
-  name: 'SeoAnalyzer',
+  name: 'KeywordDensity',
   data() {
     return {
-      title: 'SEO Analyzer',
+      title: 'Keyword Density',
       subtitle: 'Get a more detail SEO report for your website by contacting us.',
       loading: false,
       link: '',

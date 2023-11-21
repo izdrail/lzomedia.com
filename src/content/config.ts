@@ -12,7 +12,6 @@ export const collections = {
 		}),
 	}),
 
-
     courses: defineCollection({
         schema: z.object({
             title: z.string(),

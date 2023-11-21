@@ -4,8 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 
 import Hero from '../components/Hero.astro';
+import SeoAnalyzer from '../vue/SeoAnalyzer.vue';
 
-import SeoAnalyzer from '../components/SeoAnalyzer.vue';
+import KeywordDensity from '../vue/KeywordDensity.vue';
 ---
 
 <BaseLayout
@@ -20,19 +21,7 @@ import SeoAnalyzer from '../components/SeoAnalyzer.vue';
 				tagline="Boost your website's performance with a complimentary SEO checkup!"
 				align="center"
 			/>
-			<section class="dark:bg-gray-900">
-				<div class="container px-6 py-10 mx-auto">
-					<div class="grid grid-cols-1 gap-8 md:grid-cols-1">
-						<p class="text-center">
-							Boost your website's success with a complimentary SEO checkup! Elevate your online presence and take the first step towards unlocking its full potential.
-						</p>
-						<p class="text-center">
-							claim your free SEO audit now!
-						</p>
-					</div>
-				</div>
-			</section>
-			<SeoAnalyzer client:visible />
+			<KeywordDensity client:visible />
 		</main>
 		<ContactCTA />
 	</div>
