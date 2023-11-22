@@ -8,7 +8,7 @@ import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 import CoursePreview from "../components/CoursePreview.astro";
 
-const projects = (await getCollection('courses')).sort(
+const courses = (await getCollection('courses')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
@@ -26,9 +26,9 @@ const projects = (await getCollection('courses')).sort(
 			/>
 			<Grid variant="offset">
 				{
-					projects.map((project) => (
+					courses.map((course) => (
 						<li>
-							<CoursePreview project={project} />
+							<CoursePreview project={course} />
 						</li>
 					))
 				}

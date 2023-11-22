@@ -3,8 +3,7 @@ title: Angular meets Laravel in an Epic Web Adventure and Hilarious Learning Fie
 publishDate: 2023-19-04 00:00:00
 description: |
   Hey there, coding connoisseurs! Buckle up for a wild ride as we embark on a journey to create a web application that dances to the tunes of TypeScript and PHP. Welcome to the Angular and Laravel Extravaganza!
-img: ../../assets/courses/laravel-framework-with-angular-2-setup.jpg
-img_alt: Laravel and Angular course
+image: ../../assets/courses/laravel-framework-with-angular-2-setup.jpg
 tags:
   - Laravel
   - Courses

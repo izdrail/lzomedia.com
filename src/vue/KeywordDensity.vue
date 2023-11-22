@@ -42,8 +42,10 @@
         </div>
       </div>
       <form @submit.prevent="getSeoReport" class="p-6 flex flex-col justify-center">
-        <div class="flex flex-col text-white">
-          Provide your website url.
+        <div class="flex flex-col">
+          <span class="">
+            Provide your website url.
+          </span>
         </div>
         <div class="flex flex-col">
           <label for="link" class="hidden">Website Url</label>
@@ -94,7 +96,7 @@ export default {
       // Show loading icon
       this.loading = true;
       // Make API call
-      fetch(`http://31.14.41.92:8000/seo-analyze`, {
+      fetch(`https://api.lzomedia.com/seo-analyze`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -102,6 +104,30 @@ export default {
         body: JSON.stringify({
           link: this.link,
           format: 'html',
+        }),
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          this.response = data;
+          this.loading = false;
+        })
+        .catch(error => {
+          console.log(error);
+          this.loading = false;
+        });
+    },
+    getArticleContent(){
+      // Show loading icon
+      this.loading = true;
+      // Make API call
+      fetch(`https://api.lzomedia.com/article`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          link: this.link,
         }),
       })
         .then(response => response.json())
