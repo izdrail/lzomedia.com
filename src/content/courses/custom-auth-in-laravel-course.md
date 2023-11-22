@@ -3,8 +3,7 @@ title: How to implement a custom auth in Laravel
 publishDate: 2023-19-04 00:00:00
 description: |
   Learn how to implement a custom auth in Laravel. This course will teach you how to create a custom auth in Laravel using the built-in authentication system.
-img: https://i.imgur.com/aGXFip9.jpg
-img_alt: Laravel Design Patterns
+image: ../../assets/courses/custom-auth-in-laravel-course.jpg
 tags:
   - Laravel
   - Courses

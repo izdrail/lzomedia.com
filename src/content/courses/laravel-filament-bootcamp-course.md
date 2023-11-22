@@ -3,8 +3,7 @@ title: Laravel Filament Bootcamp Course
 publishDate: 2023-19-04 00:00:00
 description: |
     Laravel Filament Bootcamp is a course that teaches you how to build a SaaS app using Laravel and Filament. It covers everything from the basics of Laravel to advanced topics like event sourcing and CQRS.
-img: https://i.imgur.com/aGXFip9.jpg
-img_alt: Laravel Design Patterns
+image: ../../assets/courses/laravel-filament-bootcamp.jpg
 tags:
   - Laravel
   - Courses

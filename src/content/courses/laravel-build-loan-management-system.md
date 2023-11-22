@@ -3,8 +3,7 @@ title: Laravel 10 – Build Loan Management System (2023)
 publishDate: 2023-19-04 00:00:00
 description: |
     Laravel Filament Bootcamp is a course that teaches you how to build a SaaS app using Laravel and Filament. It covers everything from the basics of Laravel to advanced topics like event sourcing and CQRS.
-img: https://i.imgur.com/aGXFip9.jpg
-img_alt: Laravel Design Patterns
+image: ../../assets/courses/how-to-build-a-loan-management-laravel.jpg 
 tags:
   - Laravel
   - Courses
@@ -14,7 +13,6 @@ tags:
 ---
 Welcome to the most fantastic web development journey ever! In this hilariously enlightening course, we'll dive into the magical world of Laravel 10 and create a Loan Management System that's not just cool but also gives you the superhero ability to conquer any web application challenge that comes your way. 🦸‍♂️💻
 
-## What's on the Fun Agenda:
 
 ### Module 1: The Epic Beginning
 - Introduction to the Awesomeness ➡️ 2 lectures • 11min
@@ -45,12 +43,12 @@ Welcome to the most fantastic web development journey ever! In this hilariously 
 
 Embark on this epic quest and not only will you master these features but also gain the power to create web applications like a wizard:
 
-- 🚀 Multi-Authentication System for different users
-- 🛤️ Mastering Laravel Routing System like a Pro
-- 🎨 Creating Laravel Project with Tailwind CSS from Scratch
-- 🖼️ Image Manipulation Magic
-- 🚨 Advanced Prompt Alerting Wizardry
-- 🤯 Beginner to Advance JavaScript Sorcery
+- 😎 Multi-Authentication System for different users
+- 😎 Mastering Laravel Routing System like a Pro
+- 😎 Creating Laravel Project with Tailwind CSS from Scratch
+- 😎 Image Manipulation Magic
+- 😎 Advanced Prompt Alerting Wizardry
+- 😎 Beginner to Advance JavaScript Sorcery
 
 These are just a sneak peek into the fantastic features you'll conquer on this laughter-filled coding journey!
 

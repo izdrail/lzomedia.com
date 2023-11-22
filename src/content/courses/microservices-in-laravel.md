@@ -3,8 +3,7 @@ title: Microservices with Laravel - Book & Source Code
 publishDate: 2023-19-04 00:00:00
 description: |
   Microservices with Laravel is a book that teaches you how to build microservices using Laravel and PHP. It covers everything from the basics of microservices to advanced topics like event sourcing and CQRS.
-img: https://i.imgur.com/aGXFip9.jpg
-img_alt: Laravel Design Patterns
+image: ../../assets/courses/microservices-with-laravel.png
 tags:
   - Laravel
   - Courses
