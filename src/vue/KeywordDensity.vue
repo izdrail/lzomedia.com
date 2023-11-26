@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
         <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
@@ -96,7 +96,7 @@ export default {
       // Show loading icon
       this.loading = true;
       // Make API call
-      fetch(`https://api.lzomedia.com/seo-analyze`, {
+      fetch(`https://api.todayintel.com/seo/analyze`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

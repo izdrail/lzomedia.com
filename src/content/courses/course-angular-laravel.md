@@ -32,6 +32,8 @@ Hey there, coding connoisseurs! Buckle up for a wild ride as we embark on a jour
 ### Welcome to the Angular and Laravel Madness
 - Brace yourself, we're diving into a world where TypeScript meets PHP in the most unexpected ways.
 
+
+![](../../../public/assets/courses/laravel-framework-with-angular-2-setup.jpg)
 ### Class Overview:
 - We're cooking up a storm with a CRUD web project. Get ready for the ride!
 
