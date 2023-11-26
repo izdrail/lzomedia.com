@@ -1,71 +1,53 @@
 <template>
   <section>
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="container px-6 py-16 mx-auto text-center">
+      <div class="max-w-lg mx-auto">
+        <label for="link" class="hidden">Website Url</label>
+        <div class="w-full max-w-sm mx-auto mt-6 bg-transparent border rounded-md dark:border-gray-700 focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 dark:focus-within:border-blue-300 focus-within:ring-opacity-40">
 
-      <form @submit.prevent="getSeoReport" class="p-6 flex flex-col justify-center">
-        <div class="flex flex-col text-white">
-          Provide your website url.
-        </div>
-        <div class="flex flex-col">
-          <label for="link" class="hidden">Website Url</label>
-          <input v-model="link" type="url" name="link" id="link" placeholder="https://" class="w-100 mt-2 py-3 px-3 rounded-lg bg-variant dark:bg-gray-700 border border-gray-400 dark:border-gray-700 dark:text-white-800">
-        </div>
-        <button type="submit" class="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
-          <span v-if="loading">
-            Loading...
-          </span>
-          <span v-else>
-            Submit
-          </span>
-        </button>
-      </form>
+          <form @submit.prevent="getSeoReport" class="p-6 flex flex-col md:flex-row">
+            <div class="flex flex-col">
 
-      <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-        <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
-          {{ title }}
-        </h1>
-        <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-          {{ subtitle }}
-        </p>
-
-        <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-          <div class="ml-4 text-md tracking-wide font-semibold w-40">
-           9 Haddon Road, London, SE25 6TH
-          </div>
-        </div>
-
-        <div class="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          <div class="ml-4 text-md tracking-wide font-semibold w-40">
-            <a class="underline" href="tel:+44 744 821 88 99">
-              +44 744 821 88 99
-            </a>
-          </div>
-        </div>
-
-        <div class="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          <div class="ml-4 text-md tracking-wide font-semibold w-40">
-            <a class="underline" href="mailto:Stefan@LzoMedia.com">
-              Stefan@LzoMedia.com
-            </a>
-          </div>
+              <input required v-model="link" type="url" name="link" id="link" placeholder="https://" class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0">
+            </div>
+            <button type="submit" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
+              <div v-if="loading">
+                Loading...
+              </div>
+              <div v-else>
+                Submit
+              </div>
+            </button>
+          </form>
         </div>
       </div>
 
 
-    </div>
-  </section>
-  <section class="mt-3">
-    <div v-html="response" class="grid dark:text-white grid-cols-1">
+      <div v-if="loading">
+        <span class="loading loading-ring loading-xs"></span>
+        <span class="loading loading-ring loading-sm"></span>
+        <span class="loading loading-ring loading-md"></span>
+        <span class="loading loading-ring loading-lg"></span>
+      </div>
+
+      <div class="w-full max-w-sm mx-auto mt-6">
+        <div v-if="display_errors" class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+          <div class="flex items-center justify-center w-12 bg-red-500">
+            <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 3.36667C10.8167 3.36667 3.3667 10.8167 3.3667 20C3.3667 29.1833 10.8167 36.6333 20 36.6333C29.1834 36.6333 36.6334 29.1833 36.6334 20C36.6334 10.8167 29.1834 3.36667 20 3.36667ZM19.1334 33.3333V22.9H13.3334L21.6667 6.66667V17.1H27.25L19.1334 33.3333Z" />
+            </svg>
+          </div>
+
+          <div class="px-4 py-2 -mx-3">
+            <div class="mx-3">
+              <span class="font-semibold text-red-500 dark:text-red-400">Error</span>
+              <p class="text-sm text-gray-600 dark:text-gray-200">
+                {{ errors }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -80,17 +62,17 @@
 <script>
 console.log('seo-analyzer.vue')
 
-
-
 export default {
   name: 'SeoAnalyzer',
   data() {
     return {
       title: 'SEO Analyzer',
-      subtitle: 'Get a more detail SEO report for your website by contacting us.',
+      subtitle: 'Get a more detail SEO report for your website by contacting me directly or setup a meeting.',
       loading: false,
       link: '',
       response: '',
+      display_errors: false,
+      errors: "",
     }
   },
   methods: {
@@ -98,14 +80,14 @@ export default {
       // Show loading icon
       this.loading = true;
       // Make API call
-      fetch(`http://31.14.41.92:8000/seo-analyze`, {
+      fetch(`https://api.todayintel.com/seo/analyze`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           link: this.link,
-          format: 'html',
+          format: 'json',
         }),
       })
         .then(response => response.json())
@@ -116,9 +98,15 @@ export default {
         })
         .catch(error => {
           console.log(error);
+          this.display_errors = true;
+          this.errors = error;
           this.loading = false;
         });
     },
+  },
+  mounted() {
+    console.log('Component mounted.')
+    window.loadingSpeed = 35;
   },
 }
 </script>

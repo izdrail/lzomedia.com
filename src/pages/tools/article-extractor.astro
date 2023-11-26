@@ -5,24 +5,23 @@ import ContactCTA from '../../components/ContactCTA.astro';
 
 import Hero from '../../components/Hero.astro';
 
-import KeywordDensity from '../../vue/KeywordDensity.vue';
+import ArticleExtractor from '../../vue/ArticleExtractor.vue';
 ---
 
 <BaseLayout
-	title="Free SEO Tools - Keyword Density Checker"
-	description="Free SEO Tools - Keyword Density Checker"
+	title="Free Tools - Article extraction, keyword density, sentiment analysis and more"
+	description=""
 >
 	<div class="stack gap-20">
 
 		<main class="wrapper stack gap-12">
 			<Hero
-				title="Keyword Density Checker"
-				tagline="Check the keyword density of your website."
+				title="Extract text from any link"
+				tagline="Find out what keywords are trending on Google and other search engines."
 				align="center"
 			/>
-			<KeywordDensity client:visible />
+			<ArticleExtractor client:visible />
 		</main>
-		<ContactCTA />
 	</div>
 </BaseLayout>
 <script>
