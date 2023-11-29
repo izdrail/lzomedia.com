@@ -15,9 +15,11 @@
     "@astrojs/vue": "^3.0.4",
     "astro": "^3",
     "astro-remote": "^0.2.3",
+    "chart.js": "^3.9.1",
     "octokit": "^2.0.14",
     "tailwindcss": "^3.3.5",
-    "vue": "^3.3.8"
+    "vue": "^3.3.8",
+    "vue-chart-3": "^3.1.8"
   },
   "devDependencies": {
     "@vite-pwa/astro": "^0.1.5"
