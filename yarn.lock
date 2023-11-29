@@ -4589,6 +4589,11 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+plotly.js-dist@^2.24.2:
+  version "2.27.1"
+  resolved "https://registry.npmjs.org/plotly.js-dist/-/plotly.js-dist-2.27.1.tgz"
+  integrity sha512-0ANRbzVXbi4H01njmpOSPSUoo6NVTZC/gJJhn4J2lUx6Woc5j1Fye3A0+VwXYV2+UxCEU7WTkyaI2y8l4bCu4A==
+
 postcss-import@^15.1.0:
   version "15.1.0"
   resolved "https://registry.npmjs.org/postcss-import/-/postcss-import-15.1.0.tgz"
@@ -5857,6 +5862,11 @@ util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
+uuid@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz"
+  integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
+
 uvu@^0.5.0:
   version "0.5.6"
   resolved "https://registry.npmjs.org/uvu/-/uvu-0.5.6.tgz"
@@ -5955,7 +5965,7 @@ vue-chart-3@^3.1.8:
     csstype latest
     lodash-es latest
 
-vue@^3.0.0, vue@^3.2.25, vue@^3.2.30, vue@^3.3.8, "vue@>= 3", vue@3.3.8:
+vue@^3.0.0, vue@^3.2.21, vue@^3.2.25, vue@^3.2.30, vue@^3.3.8, "vue@>= 3", vue@3.3.8:
   version "3.3.8"
   resolved "https://registry.npmjs.org/vue/-/vue-3.3.8.tgz"
   integrity sha512-5VSX/3DabBikOXMsxzlW8JyfeLKlG9mzqnWgLQLty88vdZL7ZJgrdgBOmrArwxiLtmS+lNNpPcBYqrhE6TQW5w==
@@ -5965,6 +5975,13 @@ vue@^3.0.0, vue@^3.2.25, vue@^3.2.30, vue@^3.3.8, "vue@>= 3", vue@3.3.8:
     "@vue/runtime-dom" "3.3.8"
     "@vue/server-renderer" "3.3.8"
     "@vue/shared" "3.3.8"
+
+vue3-plotly@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/vue3-plotly/-/vue3-plotly-0.0.7.tgz"
+  integrity sha512-ydNOgbQlmg4Zp1etfUVsCKO4ejp/18oZ1pYr0b+pnhwYyx2BNZ+UyuK2PKKRwNdPSpohUBTDml3mhHiF54zVgQ==
+  dependencies:
+    plotly.js-dist "^2.24.2"
 
 web-namespaces@^2.0.0:
   version "2.0.1"
