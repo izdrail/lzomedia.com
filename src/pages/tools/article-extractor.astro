@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import Hero from '../../components/Hero.astro';
+
+import ArticleExtractor from '../../vue/ArticleExtractor.vue';
+---
+
+<BaseLayout
+	title="Free Tools - Article extraction, keyword density, sentiment analysis and more"
+	description="Extract text from any link. Find out what keywords are trending on Google and other search engines."
+>
+	<div class="stack gap-20">
+
+		<main class="wrapper stack gap-12">
+			<Hero
+				title="Extract text from any link"
+				tagline="Find out what keywords are trending on Google and other search engines."
+				align="center"
+			/>
+			<ArticleExtractor client:visible />
+		</main>
+	</div>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import Hero from '../../components/Hero.astro';
+
+import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
+---
+
+<BaseLayout
+	title="Free Tools - Seo Analyzer"
+	description="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-12">
+			<Hero
+				title="SEO Analyzer"
+				tagline="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
+				align="center"
+			/>
+			<SeoAnalyzer client:visible />
+		</main>
+	</div>
+</BaseLayout>

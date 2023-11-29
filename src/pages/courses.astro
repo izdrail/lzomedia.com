@@ -17,23 +17,20 @@ const courses = (await getCollection('courses')).sort(
 	title="Free programming courses and tutorials - Laravel Developer"
 	description="Free programming courses and tutorials - Laravel Developer - Learn how to build websites and web applications using PHP, Laravel, Vue, Tailwind CSS, and more!"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Free Courses and Tutorials"
-				tagline="Learn how to build websites and web applications using PHP, Laravel, Vue, Tailwind CSS, and more!"
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					courses.map((course) => (
-						<li>
-							<CoursePreview project={course} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
-	</div>
+	<main class="wrapper stack gap-8">
+		<Hero
+			title="Free Courses and Tutorials"
+			tagline="Learn how to build websites and web applications using PHP, Laravel, Vue, Tailwind CSS, and more!"
+			align="start"
+		/>
+		<Grid variant="offset">
+			{
+				courses.map((course) => (
+					<li>
+						<CoursePreview project={course} />
+					</li>
+				))
+			}
+		</Grid>
+	</main>
 </BaseLayout>

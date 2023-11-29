@@ -4,9 +4,10 @@ import vue from "@astrojs/vue";
 
 // https://astro.build/config
 
+import AstroPWA from '@vite-pwa/astro'
 
 export default defineConfig({
-  integrations: [tailwind(),vue()],
+  integrations: [tailwind(),vue(),AstroPWA()],
   vite: {
     ssr: {
       noExternal: [
