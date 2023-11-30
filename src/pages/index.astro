@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import {getCollection} from 'astro:content';
 
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
@@ -20,257 +20,266 @@ import Testimonials from '../components/Testimonials.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
-	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-	.slice(0, 4);
-
-
+    .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+    .slice(0, 4);
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
-				<Hero
-					title="Hello, my name is Stefan."
-					tagline="Seeking a top-notch Laravel developer for hire in London? Look no further! 🚀 With expert skills in Laravel, I bring your web dreams to life."
-					align="start"
-				>
-					<div class="roles">
-						<Pill>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-							</svg>
+    <main>
+        <section class="wrapper stack gap-20 lg:gap-48">
+            <header class="hero">
+                <Hero
+                        title="Hello, my name is Stefan."
+                        tagline="Seeking a top-notch Laravel developer for hire in London? Look no further! 🚀 With expert skills in Laravel, I bring your web dreams to life."
+                        align="start"
+                >
+                    <div class="roles">
+                        <Pill>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+                            </svg>
 
-							#Laravel Developer</Pill>
-						<Pill><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
-						</svg>
-							#LondonHire </Pill>
+                            #Laravel Developer
+                        </Pill>
+                        <Pill>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"/>
+                            </svg>
+                            #LondonHire
+                        </Pill>
 
-						<Pill>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
-							</svg>
-							#Web Developer</Pill>
+                        <Pill>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
+                            </svg>
+                            #Web Developer
+                        </Pill>
 
-						<Pill>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
-						</svg>
-							Hardware enthusiast</Pill>
+                        <Pill>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
+                            </svg>
+                            Hardware enthusiast
+                        </Pill>
 
-					</div>
-				</Hero>
+                    </div>
+                </Hero>
 
-				<img
-					alt="Stefan aka @cornatul"
-					style="box-shadow: none !important;aspect-ratio: 3/3;"
-					height="620"
-					src="https://i.imgur.com/ORy5HLT.jpg"
-				/>
-			</header>
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Skills</h2>
-					<p>
-						🔥 London's Multi talented <b>Laravel Developer</b> with a Dash of Magic! 🎩💼 Proficient in PHP, Python, and DevOps, I weave seamless web solutions that defy expectations. 🌐 From elegant Laravel applications to cutting-edge Python scripts, I've got the skills to mesmerize your audience. 🚀
-					</p>
-				</header>
+                <img
+                        alt="Stefan aka @cornatul"
+                        style="box-shadow: none !important;aspect-ratio: 3/3;"
+                        height="620"
+                        src="https://i.imgur.com/ORy5HLT.jpg"
+                />
+            </header>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan'].map((brand) => (
-								<li class="mention-card">
-									<h4 title={brand + ' developer london available for hire'}>{brand}</h4>
+            <section class="section with-background bg-variant">
+                <header class="section-header stack gap-2 lg:gap-4">
+                    <h2 title="Senior Developer">
+                        Senior Developer London
+                    </h2>
+                    <p>
+                        I'm a senior full-stack developer with over 10 years of experience in web development. I'm
+                        available for hire on a freelance basis, and I'm always interested in hearing about new
+                        opportunities.
+                    </p>
+                </header>
 
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
-			<Skills />
+                <div class="gallery">
+                    <Grid variant="small">
+                        {
+                            ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan'].map((brand) => (
+                                    <li class="mention-card">
+                                        <h3 title={brand + ' developer london available for hire'}>{brand}</h3>
+                                    </li>
+                            ))
+                        }
+                    </Grid>
+                </div>
+            </section>
 
-		</div>
+            <Skills/>
+
+        </section>
+        <section class="wrapper stack gap-20 lg:gap-48">
+            <div class="section with-background with-cta">
+                <header class="section-header stack stack gap-20 ">
+                    <h3>Selected Work</h3>
+                    <p>Take a look below at some of my featured work for clients from the past few years.</p>
+                </header>
+                <div class="gallery">
+                    <Grid variant="offset">
+                        {
+                            projects.map((project) => (
+                                    <li>
+                                        <PortfolioPreview project={project}/>
+                                    </li>
+                            ))
+                        }
+                    </Grid>
+                </div>
 
 
+                <div class="cta">
+                    <CallToAction href="/work/">
+                        View All
+                        <Icon icon="arrow-right" size="1.2em"/>
+                    </CallToAction>
+                </div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-
-
-
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-
-			</section>
-		</main>
-
-		<Testimonials />
-
-	</div>
+            </div>
+        </section>
+        <Testimonials/>
+    </main>
 </BaseLayout>
 
 <style>
-	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 
-	.roles {
-		display: none;
-	}
+    .roles {
+        display: none;
+    }
 
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+    .hero img {
+        aspect-ratio: 5 / 4;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
 
-	@media (min-width: 50em) {
-		.hero {
-			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
-		}
+    @media (min-width: 50em) {
+        .hero {
+            display: grid;
+            grid-template-columns: 6fr 4fr;
+            padding-inline: 2.5rem;
+            gap: 3.75rem;
+        }
 
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
-		}
+        .roles {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
 
-		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
-			object-fit: cover;
-		}
-	}
+        .hero img {
+            aspect-ratio: 3 / 4;
+            border-radius: 4.5rem;
+            object-fit: cover;
+        }
+    }
 
-	/* ====================================================== */
+    /* ====================================================== */
 
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
+    .section {
+        display: grid;
+        gap: 2rem;
+    }
 
-	.with-background {
-		position: relative;
-	}
+    .with-background {
+        position: relative;
+    }
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
+    .with-background::before {
+        --hero-bg: var(--bg-image-subtle-2);
 
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background: url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        left: 50%;
+        width: 100vw;
+        aspect-ratio: calc(2.25 / var(--bg-scale));
+        top: 0;
+        transform: translateY(-75%) translateX(-50%);
+        background: url('/assets/backgrounds/noise.png') top center/220px repeat,
+        var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
+        background-blend-mode: overlay, normal, normal, normal;
+        mix-blend-mode: var(--bg-blend-mode);
+        z-index: -1;
+    }
 
-	.with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
-	}
+    .with-background.bg-variant::before {
+        --hero-bg: var(--bg-image-subtle-1);
+    }
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
+    .section-header {
+        justify-self: center;
+        text-align: center;
+        max-width: 75ch;
+        font-size: var(--text-md);
+        color: var(--gray-300);
+    }
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
+    .section-header h3 {
+        font-size: var(--text-2xl);
+    }
 
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+    @media (min-width: 50em) {
+        .section {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+            gap: 5rem;
+        }
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+        .section.with-cta {
+            grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+        }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
+        .section-header {
+            grid-area: header;
+            font-size: var(--text-lg);
+        }
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+        .section-header h3 {
+            font-size: var(--text-4xl);
+        }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+        .with-cta .section-header {
+            justify-self: flex-start;
+            text-align: left;
+        }
 
-		.gallery {
-			grid-area: gallery;
-		}
+        .gallery {
+            grid-area: gallery;
+        }
 
-		.cta {
-			grid-area: cta;
-		}
-	}
+        .cta {
+            grid-area: cta;
+        }
+    }
 
-	/* ====================================================== */
+    /* ====================================================== */
 
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
+    .mention-card {
+        display: flex;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid var(--gray-800);
+        border-radius: 1.5rem;
+        color: var(--gray-300);
+        background: var(--gradient-subtle);
+        box-shadow: var(--shadow-sm);
+    }
 
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
+    @media (min-width: 50em) {
+        .mention-card {
+            border-radius: 1.5rem;
+            height: 9.5rem;
+        }
+    }
 </style>
