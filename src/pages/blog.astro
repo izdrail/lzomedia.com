@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
-
+import BlogCard from '../components/BlogCard.astro';
 
 
 const response = await fetch('https://blog.lzomedia.com/wp-json/wp/v2/posts?_embed&per_page=50');
@@ -31,28 +31,24 @@ const posts = data.map((post) => {
 				tagline="My thoughts on web development, design, and more."
 				align="center"
 			/>
-			<div class="container px-6 py-10 mx-auto">
-				<div class="grid grid-cols-1 gap-8 md:grid-cols-1">
-					{
-						posts.map((post) => (
-							<div class="lg:flex dark:bg-gray-900">
-								<div class="flex flex-col lg:mx-6">
-									<h3 class="text-white-800">
-										<a target="_blank" title{`${post.title}`} href={`${post.link}`}
-										   rel="noreferrer"
-										   title={`${post.title}`}
-										   class="text-xl font-semibold text-white-800 hover:underline dark:text-white ">
-											{post.title}
-										</a>
-									</h3>
-									<p set:html={post.excerpt}></p>
-								</div>
-							</div>
-						))
-						}
-						</div>
-						</div>
-		</main>
 
-	</div>
+            <section class="bg-white dark:bg-gray-900">
+                <div class="container px-6 mx-auto">
+                    <div class="grid grid-cols-1  md:mt-16 md:grid-cols-2">
+
+                        {posts.map((post) => (
+                            <BlogCard
+                                title={post.title}
+                                link={post.link}
+                                date={post.date}
+                                excerpt={post.excerpt}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
 </BaseLayout>
