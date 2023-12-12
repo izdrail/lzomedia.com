@@ -24,7 +24,18 @@
       </div>
 
     </div>
-    <div class="container px-6 mx-auto mb-3 "></div>
+    <div class="container px-6 mx-auto mb-3 ">
+      {{this.response.data.title}}
+      {{this.response.data.markdown}}
+      {{this.response.data.sentiment}}
+      {{this.response.data.entities}}
+      {{this.response.data.keywords}}
+      {{this.response.data.summary }}
+
+
+
+
+    </div>
   </section>
 </template>
 

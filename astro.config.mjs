@@ -5,9 +5,10 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 
 import AstroPWA from '@vite-pwa/astro'
+import react from '@astrojs/react';
 
 export default defineConfig({
-  integrations: [tailwind(),vue(),AstroPWA()],
+  integrations: [tailwind(),vue(),AstroPWA(), react()],
   vite: {
     ssr: {
       noExternal: [

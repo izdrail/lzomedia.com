@@ -49,7 +49,7 @@ const projects = (await getCollection('work'))
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                       d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"/>
                             </svg>
-                            #LondonHire
+                            #London
                         </Pill>
 
                         <Pill>
@@ -58,7 +58,7 @@ const projects = (await getCollection('work'))
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                       d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
                             </svg>
-                            #Web Developer
+                            #Senior Developer
                         </Pill>
 
                         <Pill>
@@ -68,6 +68,15 @@ const projects = (await getCollection('work'))
                                       d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
                             </svg>
                             Hardware enthusiast
+                        </Pill>
+                        <br>
+                        <Pill>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
+                            </svg>
+                            AI Developer
                         </Pill>
 
                     </div>
@@ -87,7 +96,7 @@ const projects = (await getCollection('work'))
                         Senior Developer London
                     </h2>
                     <p>
-                        I'm a senior full-stack developer with over 10 years of experience in web development. I'm
+                        I'm a senior full-stack developer with over 15 years of experience in web development. I'm
                         available for hire on a freelance basis, and I'm always interested in hearing about new
                         opportunities.
                     </p>
@@ -98,7 +107,7 @@ const projects = (await getCollection('work'))
                         {
                             ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan'].map((brand) => (
                                     <li class="mention-card">
-                                        <h3 title={brand + ' developer london available for hire'}>{brand}</h3>
+                                        <h3 title={brand + ' developer in london available for hire'}>{brand}</h3>
                                     </li>
                             ))
                         }
@@ -109,7 +118,7 @@ const projects = (await getCollection('work'))
             <Skills/>
 
         </section>
-        <section class="wrapper stack gap-20 lg:gap-48">
+        <section class="wrapper stack mt-2 gap-20 lg:gap-48">
             <div class="section with-background with-cta">
                 <header class="section-header stack stack gap-20 ">
                     <h3>Selected Work</h3>

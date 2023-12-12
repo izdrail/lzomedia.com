@@ -10,9 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^3.0.7",
     "@astrojs/renderer-react": "^0.5.0",
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vue": "^3.0.4",
+    "@urban-bot/core": "^1.0.3",
+    "@urban-bot/telegram": "^1.0.3",
     "astro": "^3",
     "astro-remote": "^0.2.3",
     "chart.js": "^3.9.1",
