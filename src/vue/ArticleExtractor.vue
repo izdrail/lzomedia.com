@@ -24,7 +24,13 @@
       </div>
 
     </div>
-    <div class="container px-6 mx-auto mb-3 "></div>
+    <div class="container px-6 mx-auto mb-3">
+      {{response.summary}}
+    </div>
+    <div class="container px-6 mx-auto mb-3">
+      <div v-html="response.spacy"></div>
+
+    </div>
   </section>
 </template>
 
@@ -54,20 +60,18 @@ export default {
       // Show loading icon
       this.loading = true;
       // Make API call
-      fetch(`https://api.todayintel.com/nlp/article`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          link: this.link,
-        }),
-      })
+          fetch(`https://api.todayintel.com/nlp/article`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              link: this.link,
+            }),
+          })
           .then(response => response.json())
-          .then(data => {
-            console.log(data);
-            this.response = data;
-
+          .then(response => {
+            this.response = response.data;
             this.loading = false;
           })
           .catch(error => {
