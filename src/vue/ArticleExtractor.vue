@@ -6,30 +6,28 @@
             class="w-full max-w-sm mx-auto mt-6 bg-transparent border rounded-md dark:border-gray-700 focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 dark:focus-within:border-blue-300 focus-within:ring-opacity-40">
           <form @submit.prevent="extractArticle" class="p-6 flex flex-col md:flex-row">
             <div class="flex flex-col">
-              <label for="link" class="hidden">Website Url</label>
+              <label for="link" class="hidden">Article Url</label>
               <input v-model="link" type="url" name="link" id="link" placeholder="https://"
                      class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0">
             </div>
             <button type="submit"
                     class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
-              <div v-if="loading">
-                Loading...
-              </div>
-              <div v-else>
-                Submit
-              </div>
+                    <span v-if="loading">
+                      Loading...
+                    </span>
+                    <span v-else>
+                      Submit
+                    </span>
             </button>
           </form>
         </div>
       </div>
-
     </div>
     <div class="container px-6 mx-auto mb-3">
       {{response.summary}}
     </div>
     <div class="container px-6 mx-auto mb-3">
       <div v-html="response.spacy"></div>
-
     </div>
   </section>
 </template>
@@ -52,7 +50,10 @@ export default {
       subtitle: 'Get a more detail SEO report for your website by contacting me directly or setup a meeting.',
       loading: false,
       link: '',
-      response: '',
+      response: {
+        summary: '',
+        spacy: '',
+      },
     }
   },
   methods: {
