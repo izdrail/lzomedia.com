@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import Hero from '../../components/Hero.astro';
+
+import TrendingNow from '../../vue/TrendingNow.vue';
+---
+
+
+<meta property="og:type" content="product">
+<meta property="og:title" content="Find the latest trending keywords on google">
+<meta property="og:description" content="Find what is trending in media news hourly.">
+<meta property="og:image" content="https://cdn.svgator.com/assets/landing-pages/web-animation/responsive-web-animation.svg">
+<meta property="og:url" content="https://lzomedia.com/tools/trending-now/">
+<meta property="og:site_name" content="Software development company">
+
+<BaseLayout
+	title="Free Tools - Keywords Trending"
+	description="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-12">
+			<Hero
+				title="Trending now"
+				tagline="Get a more in-depth look at what is curentlly trending in media news with my analyzer tool."
+				align="center"
+			/>
+
+            <TrendingNow client:visible/>
+		</main>
+	</div>
+</BaseLayout>

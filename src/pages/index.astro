@@ -95,7 +95,7 @@ const projects = (await getCollection('work'))
                 <div class="gallery">
                     <Grid variant="small">
                         {
-                            ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan'].map((brand) => (
+                            ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan', "LLM's"].map((brand) => (
                                     <li class="mention-card">
                                         <h3 title={brand + ' developer london available for hire'}>{brand}</h3>
                                     </li>
@@ -108,7 +108,7 @@ const projects = (await getCollection('work'))
             <Skills/>
 
         </section>
-        <section class="wrapper stack gap-20 lg:gap-48">
+        <section class="wrapper mt-20 mb-10 stack gap-20 lg:gap-48">
             <div class="section with-background with-cta">
                 <header class="section-header stack stack lg:gap-20 ">
                     <h3>Selected Work</h3>

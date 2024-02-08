@@ -1,68 +1,132 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import Icon from "../components/Icon.astro";
+import CallToAction from "../components/CallToAction.astro";
 ---
 
 <BaseLayout
-	title="Free Tools for SEO, NLP, Article Extractor and more"
-	description="Boost your website's performance with a complimentary set of free tools like article extractor, seo analyzer and more."
+        title="Free Tools for SEO, NLP, Article Extractor and more"
+        description="Boost your website's performance with a complimentary set of free tools like article extractor, seo analyzer and more."
 >
-	<main class="wrapper stack gap-12">
-		<Hero
-			title="Free Tools"
-			tagline="Boost your website's performance with a complimentary set of free tools like article extractor, nlp, seo analyzer and more."
-			align="center"
-		/>
+    <main class="wrapper stack gap-12">
+        <Hero
+                title="Free Tools"
+                tagline="Boost your website's performance with a complimentary set of free tools like article extractor, nlp, seo analyzer and more."
+                align="center"
+        />
 
 
-		<section class="container px-6 mx-auto">
-			<div class="items-center lg:flex">
-				<div class="flex items-center justify-center w-full lg:mt-0 lg:w-1/2">
+        <!-- SEO Analyzer -->
+        <section class="container mt-15 px-6 mx-auto">
+            <div class="items-center lg:flex">
+                <div class="flex items-center justify-center w-full lg:mt-0 lg:w-1/2">
 
-					<div class="R_bp ml-3">
-						<object type="image/svg+xml" aria-label="Seo analyzer animation" width="85%" height="320" data="//cdn.svgator.com/assets/landing-pages/web-animation/responsive-web-animation.svg"><img alt="Seo analyzer animation"></object>
-					</div>
-				</div>
-				<div class="w-full lg:w-1/2">
-					<div class="lg:max-w-lg">
-						<h2 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
+                    <div class="R_bp ml-3">
+                        <object type="image/svg+xml" aria-label="Seo analyzer animation" width="85%" height="320"
+                                data="//cdn.svgator.com/assets/landing-pages/web-animation/responsive-web-animation.svg">
+                            <img alt="Seo analyzer animation"></object>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="lg:max-w-lg">
+                        <h2 class="text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl">
 
-							<a title="free seo analizer" href="/tools/free-seo-analyze" class="dark:text-white ligh:text-black-600 hover:text-blue-500">Seo Analyzer</a>
-						</h2>
+                            <a title="free seo analizer" href="/tools/free-seo-analyze"
+                               class="dark:text-white ligh:text-black-600 hover:text-blue-500">Seo Analyzer</a>
+                        </h2>
 
-						<p class="mt-3 mb-6 text-gray-600 dark:text-gray-400">
-							Seo Analyzer is a free tool that will perform a detailed website analysis across many seo data points, and provide clear and actionable recommendations for steps you can take to improve your online presence and ultimately rank better in Search Engine Results.
-						</p>
+                        <p class="mt-3 text-xl font-semibold mb-6 text-gray-600 dark:text-gray-200">
+                            Seo Analyzer is a free tool that will perform a detailed website analysis across many seo
+                            data points, and provide clear and actionable recommendations for steps you can take to
+                            improve your online presence and ultimately rank better in Search Engine Results.
+                        </p>
 
-						<a class="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500" href="/tools/free-seo-analyze">Run now</a>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<section class="container px-6 mx-auto">
-			<div class="items-center lg:flex">
+                        <div class="cta">
+                            <CallToAction title="Run Now" href="/tools/free-seo-analyze/">
+                                Run Now
+                                <Icon icon="arrow-right" size="1.2em"/>
+                            </CallToAction>
+                        </div>
 
-				<div class="w-full lg:w-1/2">
-					<div class="lg:max-w-lg">
-						<h2 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
-							<a href="/tools/article-extractor" class="dark:text-white-600 hover:text-blue-500">
-								Article Extractor
-							</a>
-						</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						<p class="mt-3 mb-6 text-gray-600 dark:text-gray-400">
-							Article Extractor is a free tool that will extract the main content from any URL and convert it into a clean HTML that you can paste into your favorite CMS.
-						</p>
 
-						<a href="/tools/article-extractor" class="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Run Now</a>
-					</div>
-				</div>
+        <!-- NLP -->
+        <section class="container px-6 mx-auto">
+            <div class="items-center lg:flex">
 
-				<div class="flex items-center justify-center w-full lg:mt-0 lg:w-1/2">
-					<div class="R_bp ml-3"><object type="image/svg+xml" aria-label="Responsive web animation" width="85%" height="320" data="../../assets/animations/robot-anymation.svg"><img alt="Responsive web animation"></object></div>
-				</div>
-			</div>
-		</section>
-	</main>
+                <div class="w-full lg:w-1/2">
+                    <div class="lg:max-w-lg">
+                        <h2 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
+                            <a href="/tools/article-extractor" class="dark:text-white-600 hover:text-blue-500">
+                                Article Extractor
+                            </a>
+                        </h2>
+
+                        <p class="mt-3 text-xl font-semibold mb-6 text-gray-600 dark:text-gray-200">
+                            Article Extractor is a free tool that will extract the main content from any URL and convert
+                            it into a clean HTML that you can paste into your favorite CMS.
+                        </p>
+
+                        <div class="cta">
+                            <CallToAction href="/tools/article-extractor/">
+                                Extract Now
+                                <Icon icon="arrow-right" size="1.2em"/>
+                            </CallToAction>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center w-full lg:mt-0 lg:w-1/2">
+                    <div class="R_bp ml-3">
+                        <object type="image/svg+xml" aria-label="Responsive web animation" width="85%" height="320"
+                                data="../../assets/animations/robot-anymation.svg"><img alt="Responsive web animation">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending !-->
+        <section class="container px-6 mx-auto mb-20 ">
+            <div class="items-center lg:flex">
+                <div class="flex items-center justify-center w-full lg:mt-0 lg:w-1/2">
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon
+                            src="https://cdn.lordicon.com/kiynvdns.json"
+                            trigger="loop"
+                            delay="2000"
+                            style="width:250px;height:250px">
+                    </lord-icon>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="lg:max-w-lg">
+                        <h2 class="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
+
+                            <a title="free seo analizer" href="/tools/trending-now"
+                               class="dark:text-white ligh:text-black-600 hover:text-blue-500">
+                                Media Chatter
+                            </a>
+                        </h2>
+
+                        <p class="mt-3 text-xl font-semibold mb-6 text-gray-600 dark:text-gray-200">
+                            Find out what people are saying about your brand, product, or service. Media Chatter is a
+                            free tool that will help you to find what is currently trending across the web and media.
+                        </p>
+
+                        <CallToAction href="/tools/trending-now/">
+                            Find Now
+                            <Icon icon="arrow-right" size="1.2em"/>
+                        </CallToAction>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </BaseLayout>

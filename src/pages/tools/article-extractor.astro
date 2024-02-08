@@ -18,6 +18,76 @@ import ArticleExtractor from '../../vue/ArticleExtractor.vue';
 				tagline="Extract text from any link and analyze it for keywords, sentiment, and more."
 			/>
 			<ArticleExtractor client:visible />
-		</main>
+
+            <!-- About the project sections -->
+            <section>
+                <h3>
+                    About
+                </h3>
+                <div class="text-2xl">
+                    <p>
+                        This tool allows you to extract the main content from any web page and analyze it for keywords, sentiment, and more.
+                    </p>
+                    <p>
+                        The tool is designed to help webmasters, marketers and search engine optimization (SEO) specialists to get a more insightful image on a piece of content .
+                    </p>
+
+                </div>
+            </section>
+
+
+            <!--Requirements for running -->
+            <section>
+                <h3>
+                   Why I've built this tool
+                </h3>
+                <div class="text-2xl">
+                    <p>
+                        I've built this tool to showcase my skills in building web applications using the latest technologies like python, fastapi, vuejs, tailwindcss and docker.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>
+                    Run your own
+                </h3>
+                <div class="text-2xl">
+                    <p>
+                        I've decided to make the source code of this tool available to the public.
+                        You can run your own instance of the tool by following the instructions on the <a href="https://github.com/cornatul/api.todayintel.com">GitHub repository</a> .
+                    </p>
+                    <p>
+                        Or even better run it on your local machine using docker and docker-compose.
+                    </p>
+                    <p class="mt-5">
+                        <code>
+                            docker pull cornatul/api.todayintel.com:v1
+                        </code>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>
+                    Open API Documentation
+                </h3>
+                <div class="text-2xl">
+                    <p>
+                        The API documentation is available online at the following address:
+                    </p>
+                    <p class="mt-5">
+                        <code>
+                            https://api.todayintel.com/docs
+                        </code>
+                    </p>
+                    <p>
+                        <br>
+                        Feel free to use the API for your own projects.
+                    </p>
+                </div>
+            </section>
+
+        </main>
 	</div>
 </BaseLayout>
