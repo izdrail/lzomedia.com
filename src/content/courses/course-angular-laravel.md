@@ -64,4 +64,3 @@ Hey there, coding connoisseurs! Buckle up for a wild ride as we embark on a jour
 3. Use VSCode for the adventure and make sure NodeJS is your trusty sidekick for Angular 
 4. We'll set sail with Laravel Sail – the container approach for a seamless journey
 
-Get ready to laugh, learn, and code like never before! 🎉💻
