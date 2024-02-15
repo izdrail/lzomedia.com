@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+import Testimonials from "../components/Testimonials.astro";
+
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Companies I've Worked With"
+	description="A collection of projects I've worked on with various companies."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+            <Testimonials />
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
