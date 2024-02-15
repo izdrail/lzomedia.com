@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+import ServicesPreview from "../components/ServicesPreview.astro";
+
+const services = (await getCollection('services')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Services"
+	description="Learn more about the services offered by me."
+>
+	<main class="wrapper stack gap-8">
+		<Hero
+			title="Services"
+			tagline="I offer a variety of services to help you grow your business. From web development to digital marketing, I can help you with all your needs."
+			align="start"
+		/>
+		<Grid variant="offset">
+			{
+                services.map((service) => (
+					<li>
+						<ServicesPreview project={service} />
+					</li>
+				))
+			}
+		</Grid>
+	</main>
+</BaseLayout>

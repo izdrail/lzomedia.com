@@ -21,6 +21,16 @@ export const collections = {
             publishDate: z.coerce.date(),
         }),
     }),
+
+    services: defineCollection({
+        schema: z.object({
+            title: z.string(),
+            image: z.string(),
+            tags: z.array(z.string()),
+            description: z.string(),
+            publishDate: z.coerce.date(),
+        }),
+    }),
     posts: defineCollection({
         schema: z.object({
             title: z.string(),
