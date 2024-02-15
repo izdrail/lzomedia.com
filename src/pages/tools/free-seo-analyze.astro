@@ -13,7 +13,31 @@ import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
 <meta property="og:image" content="https://cdn.svgator.com/assets/landing-pages/web-animation/responsive-web-animation.svg">
 <meta property="og:url" content="https://lzomedia.com/tools/free-seo-analyze/">
 <meta property="og:site_name" content="Software development company">
-
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Seo Analyzer",
+        "description": "Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool.",
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 4,
+                "bestRating": 5
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Fred Benson"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.4,
+            "reviewCount": 89
+        }
+    }
+</script>
 <BaseLayout
 	title="Free Tools - Seo Analyzer"
 	description="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
@@ -89,6 +113,8 @@ import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
                     </p>
                 </div>
             </section>
+
+            <!-- Seo structured data section -->
 
 		</main>
 	</div>
