@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear();
 		<div>
 			<p class="font-medium text-blue-500 dark:text-blue-400 text-center">Contact Me</p>
 
-			<h3 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white text-center">I’d love to hear from you</h3>
+			<h3 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-blue text-center">I’d love to hear from you</h3>
 
 		</div>
 
@@ -25,16 +25,24 @@ const currentYear = new Date().getFullYear();
 			</div>
 
 			<div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
-				<h4 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Chat to support</h4>
-				<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">We’re here to help.</p>
-				<p class="mt-2 text-sm text-blue-500 dark:text-blue-400">Start new chat</p>
+				<h4 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Chat to with me</h4>
+				<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    Book a 15-minute chat with me to discuss your project.
+                </p>
+				<p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                    <!-- Calendly link widget begin -->
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a class="text-blue-500  dark:text-blue-400"  href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cornatul/15min'});return false;">Schedule time with me</a>
+                    <!-- Calendly link widget end -->
+                </p>
 			</div>
 
 			<div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
 				<h4 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Call me</h4>
 				<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
 				<p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
-					<a title="laravel developer london contact number" class="dark:text-white" href="tel:+447448218899">+44 (744) 821-8899</a>
+					<a title="laravel developer london contact number" class="text-blue-500  dark:text-white" href="tel:+447448218899">+44 (744) 821-8899</a>
 				</p>
 			</div>
 		</div>

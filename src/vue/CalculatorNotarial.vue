@@ -5,8 +5,8 @@ export default {
     name: 'CalculatorNotarial',
     data() {
         return {
-            title: 'Calculator Notarial',
-            subtitle: 'Calculeaza onorariile notariale pentru diverse operatiuni notariale',
+            title: 'The Salary Calculator - 2023 / 2024 Tax Calculator',
+            subtitle: 'The Salary Calculator tells you monthly take-home, or annual earnings, considering UK Tax, National Insurance and Student Loan.\n',
             loading: false,
         }
     },
