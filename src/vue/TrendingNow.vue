@@ -23,9 +23,14 @@
 </style>
 
 <template>
+  <div v-if="loading" class="loading">
+    <div class="spinner"></div>
+  </div>
   <div class="roles">
     <div v-for="keyword in response" class="pill">
+      <a class="dark:text-white text-white" :href="`https://news.google.com/search?q=${keyword}&hl=en-GB&gl=GB&ceid=GB:en`" :title="keyword" target="_blank">
       {{ keyword }}
+      </a>
     </div>
   </div>
 
@@ -37,18 +42,10 @@ export default {
   name: 'TrendingNow',
   data() {
     return {
-      loading: false,
+      loading: true,
       response: [],
       display_errors: false,
       errors: '',
-      // SEO Report
-      render_report: false,
-      loading_time: '',
-      word_count: '',
-      warnings: [],
-      keywords: [],
-      headings: [],
-      // Charts
     }
   },
   methods: {
