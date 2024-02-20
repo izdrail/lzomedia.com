@@ -1,22 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
+title: "Testimonials"
 
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
 import Testimonials from "../components/Testimonials.astro";
-
-const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-);
 ---
 
 <BaseLayout
-	title="Projects - Stefan "
-	description="Learn about some of my work as a Senior Developer and see my most recent projects below to get an idea of my past experience."
+	title="Testimonials - PHP Developer "
+	description="Learn more about my work and what my clients have to say about me."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
