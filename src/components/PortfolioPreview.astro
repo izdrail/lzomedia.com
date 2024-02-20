@@ -12,7 +12,7 @@ const { data, slug } = Astro.props.project;
 	<span class="title">
 		{data.title}
 	</span>
-	<small class="inline-block align-middle text-white px-5 py-5">
+	<small class="inline-block align-middle dark:text-white px-5 py-5">
 		{data.description}
 	</small>
 	<img src={data.img} alt={data.title || ''} loading="lazy" decoding="async" />

@@ -86,7 +86,7 @@ const projects = (await getCollection('work'))
                         Senior Developer London
                     </h2>
                     <p>
-                        I'm a senior full-stack developer with over 13 years of experience in software development. I'm
+                        I'm a <b>senior full-stack developer</b> with over 13 years of experience in software development. I'm
                         available for hire on a freelance basis, and I'm always interested in hearing about new
                         opportunities.
                     </p>
@@ -98,6 +98,10 @@ const projects = (await getCollection('work'))
                             ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan', "LLM's"].map((brand) => (
                                     <li class="mention-card">
                                         <h3 title={brand + ' developer london available for hire'}>{brand}</h3>
+                                        <p class="appearance-none">
+                                            I'm a {brand} developer based in London, UK. I'm available for hire on a
+                                            freelance basis, and I'm always interested in hearing about new opportunities.
+                                        </p>
                                     </li>
                             ))
                         }
@@ -108,7 +112,6 @@ const projects = (await getCollection('work'))
             <Skills/>
 
         </section>
-
         <section class="wrapper mt-20 mb-10 stack gap-20 lg:gap-48">
             <div class="section with-background with-cta">
                 <header class="section-header stack stack lg:gap-20 ">
@@ -127,15 +130,55 @@ const projects = (await getCollection('work'))
                     </Grid>
                 </div>
                 <div class="cta">
-                    <CallToAction title="laravel developer" href="/work/">
+                    <CallToAction title="laravel developer my works" href="/work/">
                         View All
                         <Icon icon="arrow-right" size="1.2em"/>
                     </CallToAction>
                 </div>
-
             </div>
         </section>
+        <section class="wrapper stack gap-20 lg:gap-48">
+            <div class="container px-6 py-12 mx-auto">
+                <div>
+                    <p class="font-medium text-blue-500 dark:text-blue-400 text-center">Contact Me</p>
 
+                    <h3 class="mt-2 text-2xl font-semibold  md:text-3xl dark:text-white text-center">I’d love to hear from you</h3>
+
+                </div>
+                <div class="grid grid-cols-1 gap-12 mt-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+
+                    <div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
+                        <h4 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Chat to with me</h4>
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                            Book a 15-minute chat with me to discuss your project.
+                        </p>
+                        <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                            <!-- Calendly link widget begin -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                            <a class="text-blue-500  dark:text-blue-400" title="contact me"  href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cornatul/15min'});return false;">Schedule time with me</a>
+                            <!-- Calendly link widget end -->
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
+                        <h4 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Call me</h4>
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
+                        <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                            <a title="laravel developer london contact number" class="text-blue-500  dark:text-white" href="tel:+447448218899">+44 (744) 821-8899</a>
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mt-10">
+                    Experienced Laravel developer based in London, proficient in crafting robust and scalable web applications using the Laravel framework.
+                    Skilled in building efficient RESTful APIs, implementing authentication systems, and optimizing database performance.
+                    Committed to delivering high-quality code and exceeding client expectations.
+                    Strong understanding of modern web development practices and continuous integration/continuous deployment (CI/CD) pipelines.
+                    Passionate about staying updated with the latest technologies and contributing to the Laravel community.
+                </p>
+            </div>
+        </section>
     </main>
 </BaseLayout>
 
@@ -279,5 +322,10 @@ const projects = (await getCollection('work'))
             border-radius: 1.5rem;
             height: 9.5rem;
         }
+    }
+
+    .appearance-none {
+        appearance: none;
+        display: none;
     }
 </style>
