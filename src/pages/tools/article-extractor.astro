@@ -7,16 +7,17 @@ import ArticleExtractor from '../../vue/ArticleExtractor.vue';
 ---
 
 <BaseLayout
-	title="Free Tools - Article extraction, keyword density, sentiment analysis and more"
+	title="Article extraction, keyword density, sentiment analysis and more - Lzo Media"
 	description="Extract text from any link."
 >
 	<div class="stack gap-20">
 
 		<main class="wrapper stack gap-12">
 			<Hero
-				title="Extract text from any link"
+				title="Article extraction online tool"
 				tagline="Extract text from any link and analyze it for keywords, sentiment, and more."
 			/>
+
 			<ArticleExtractor client:visible />
 
             <!-- About the project sections -->
@@ -29,7 +30,7 @@ import ArticleExtractor from '../../vue/ArticleExtractor.vue';
                         This tool allows you to extract the main content from any web page and analyze it for keywords, sentiment, and more.
                     </p>
                     <p>
-                        The tool is designed to help webmasters, marketers and search engine optimization (SEO) specialists to get a more insightful image on a piece of content .
+                        The tool is designed to help <b>webmasters</b>, <b>marketers</b> and search engine optimization (SEO) specialists to get a more insightful image on a piece of content .
                     </p>
 
                 </div>
@@ -43,13 +44,13 @@ import ArticleExtractor from '../../vue/ArticleExtractor.vue';
                 </h3>
                 <div class="text-2xl">
                     <p>
-                        I've built this tool to showcase my skills in building web applications using the latest technologies like python, fastapi, vuejs, tailwindcss and docker.
+                        I've decided to built this tool for showcasing  my skills in building web applications using the latest technologies like python, fastapi, vuejs, tailwindcss and docker.
                     </p>
                 </div>
             </section>
 
             <section>
-                <h3>
+                <h3 title="how to run your own">
                     Run your own
                 </h3>
                 <div class="text-2xl">
@@ -88,6 +89,23 @@ import ArticleExtractor from '../../vue/ArticleExtractor.vue';
                 </div>
             </section>
 
+            <section>
+                <h3 title="Technologies used">
+                    Technologies used
+                </h3>
+                <div class="text-2xl">
+                    <p>
+                        The tool is built using the following technologies:
+                    </p>
+                    <ul class="list-disc list-inside">
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>NLTK</li>
+                        <li>Vader sentiment analysis</li>
+                        <li>SpacyNLP</li>
+                    </ul>
+                </div>
+            </section>
         </main>
 	</div>
 </BaseLayout>
