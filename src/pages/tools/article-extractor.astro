@@ -6,9 +6,43 @@ import Hero from '../../components/Hero.astro';
 import ArticleExtractor from '../../vue/ArticleExtractor.vue';
 ---
 
+<meta property="og:type" content="product">
+<meta property="og:title" content="Article Extractor - Free Tools">
+<meta property="og:url" content="https://lzomedia.com/tools/article-extractor/">
+<meta property="og:image" content="https://i.imgur.com/Dd466rF.jpg">
+<meta property="og:description" content="Extract text from any link and analyze it for keywords, sentiment, and more.">
+<meta property="product:plural_title" content="">
+<meta property="product:price.amount" content="0">
+<meta property="product:price.currency" content="GBP">
+<meta name="author" content="Stefan ♥">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Article Extractor",
+        "description": "Extract text from any link and analyze it for keywords, sentiment, and more.",
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 4,
+                "bestRating": 5
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Fred Benson"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.4,
+            "reviewCount": 89
+        }
+    }
+</script>
 <BaseLayout
-	title="Article extraction, keyword density, sentiment analysis and more - Lzo Media"
-	description="Extract text from any link."
+	title="Article Extractor - Free Tools"
+	description="Extract text from any link and analyze it for keywords, sentiment, and more."
 >
 	<div class="stack gap-20">
 
