@@ -2,78 +2,98 @@
 import Icon from './Icon.astro';
 const currentYear = new Date().getFullYear();
 ---
-
-
-
-<footer>
-	<div class="group mt-20">
-		<p style="text-align: left">
-			Designed & Developed in London by <a title="laravel developer london" href="https://lzomedia.com/">Lzo Media</a>
-		</p>
-
-        <p class="" style="text-align: right">
-            <a href="/testimonials" title="testimonials"> Testimonials</a>
-            <a href="https://twitter.com/cornatul" title="twitter"> Twitter</a>
-            <a href="https://github.com/cornatul" title="my github as a php developer"> GitHub</a>
-            <a href="https://g.dev/cornatul" title="google developers profile"> Google Developers</a>
-        </p>
-	</div>
+<footer data-testid="flowbite-footer"
+        class="w-full rounded-lg  shadow dark:bg-gray-800 md:flex md:items-center md:justify-between">
+    <div class="mx-auto flex max-w-screen-xl flex-col items-center p-4 text-center md:p-8 lg:p-10 [&amp;>div]:w-fit">
+        <div><a data-testid="flowbite-footer-brand" href="https://flowbite.com"
+                class="mb-4 flex items-center sm:mb-0"><img alt="LZO Media logo"
+                                                            src="../assets/logo.svg"
+                                                            class="mr-3 h-8"><span
+                data-testid="flowbite-footer-brand-span"
+                class="self-center whitespace-nowrap text-2xl font-semibold  dark:text-white">
+            PHP & Python Developer
+        </span></a>
+        </div>
+        <p class="my-6 text-gray-500 dark:text-gray-400">
+            I'm Stefan ♥ an top-notch Laravel developer available for hire in London! With expert skills in PHP and Python, I can bring your web dreams to life.
+            .</p>
+        <ul data-testid="footer-groupLink"
+            class="mb-6 flex flex-wrap items-center justify-center text-gray-900 dark:text-white text-base">
+            <li class="last:mr-0 mr-4 hover:underline md:mr-6">
+                <a href="/laravel-company" class="hover:underline">Laravel Development Company</a>
+            </li>
+            <li class="last:mr-0 mr-4 hover:underline md:mr-6">
+                <a href="/python-company" class="hover:underline">Python Development Company</a>
+            </li>
+            <li class="last:mr-0 mr-4 hover:underline md:mr-6">
+                <a href="/drupal-company" class="hover:underline">Drupal Development Company</a>
+            </li>
+            <li class="last:mr-0 mr-4 hover:underline md:mr-6">
+                <a href="/wordpress-company" class="hover:underline">Wordpress Development Company</a>
+            </li>
+            <li class="last:mr-0 mr-4 hover:underline md:mr-6">
+                <a href="/symfony-company" class="hover:underline">Symfony Development Company</a>
+            </li>
+        </ul>
+        <div data-testid="flowbite-footer-copyright" class="text-sm text-gray-500 dark:text-gray-400 sm:text-center">©
+            2023<a href="https://lzomedia.com" class="ml-1 hover:underline">LZO Media. All Rights Reserved.</a>
+        </div>
+    </div>
 </footer>
 
 
-
 <style>
-	footer {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-		margin-top: auto;
-		padding: 3rem 2rem 3rem;
-		text-align: center;
-		color: var(--gray-400);
-		font-size: var(--text-sm);
-	}
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: auto;
+        padding: 3rem 2rem 3rem;
+        text-align: center;
+        color: var(--gray-400);
+        font-size: var(--text-sm);
+    }
 
-	footer a {
-		color: var(--gray-400);
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+    footer a {
+        color: var(--gray-400);
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+    }
 
-	footer a:hover,
-	footer a:focus {
-		text-decoration-color: currentColor;
-	}
+    footer a:hover,
+    footer a:focus {
+        text-decoration-color: currentColor;
+    }
 
-	.group {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
+    .group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-	.socials {
-		display: flex;
-		justify-content: left;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
+    .socials {
+        display: flex;
+        justify-content: left;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
 
-	@media (min-width: 50em) {
-		footer {
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 2.5rem 5rem;
-		}
+    @media (min-width: 50em) {
+        footer {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2.5rem 5rem;
+        }
 
-		.group {
-			flex-direction: row;
-			gap: 1rem;
-			flex-wrap: wrap;
-		}
+        .group {
+            flex-direction: row;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
-		.socials {
-			justify-content: flex-start;
-		}
-	}
+        .socials {
+            justify-content: flex-start;
+        }
+    }
 </style>

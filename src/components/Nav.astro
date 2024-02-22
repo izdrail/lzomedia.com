@@ -6,7 +6,6 @@ import ThemeToggle from './ThemeToggle.astro';
 const textLinks: { label: string; href: string, title:string }[] = [
 	{ label: 'Home', href: '/', title: "Laravel Developer london" },
     { label: 'Tools', href: '/tools/', title: "Free seo tools" },
-    { label: 'Services', href: '/services/', title: "Services I offer" },
 	{ label: 'About', href: '/about/', title: "About me as a laravel developer" },
 	{ label: 'Blog', href: '/blog/', title: "My thoughts on laravel developing" },
 ];
@@ -80,38 +79,38 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 </nav>
 
 <script>
-	class MenuButton extends HTMLElement {
-		constructor() {
-			super();
+    class MenuButton extends HTMLElement {
+        constructor() {
+            super();
 
-			// Inject menu toggle button when JS runs.
-			this.appendChild(this.querySelector('template')!.content.cloneNode(true));
-			const btn = this.querySelector('button')!;
+            // Inject menu toggle button when JS runs.
+            this.appendChild(this.querySelector('template')!.content.cloneNode(true));
+            const btn = this.querySelector('button')!;
 
-			// Hide menu (shown by default to support no-JS browsers).
-			const menu = document.getElementById('menu-content')!;
-			menu.hidden = true;
+            // Hide menu (shown by default to support no-JS browsers).
+            const menu = document.getElementById('menu-content')!;
+            menu.hidden = true;
 
-			/** Set whether the menu is currently expanded or collapsed. */
-			const setExpanded = (expand: boolean) => {
-				btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
-				menu.hidden = !expand;
-			};
+            /** Set whether the menu is currently expanded or collapsed. */
+            const setExpanded = (expand: boolean) => {
+                btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+                menu.hidden = !expand;
+            };
 
-			// Toggle menu visibility when the menu button is clicked.
-			btn.addEventListener('click', () => setExpanded(menu.hidden));
+            // Toggle menu visibility when the menu button is clicked.
+            btn.addEventListener('click', () => setExpanded(menu.hidden));
 
-			// Hide menu button for large screens.
-			const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
-				setExpanded(e.matches);
-				btn.hidden = e.matches;
-			};
-			const mediaQueries = window.matchMedia('(min-width: 50em)');
-			handleViewports(mediaQueries);
-			mediaQueries.addEventListener('change', handleViewports);
-		}
-	}
-	customElements.define('menu-button', MenuButton);
+            // Hide menu button for large screens.
+            const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
+                setExpanded(e.matches);
+                btn.hidden = e.matches;
+            };
+            const mediaQueries = window.matchMedia('(min-width: 50em)');
+            handleViewports(mediaQueries);
+            mediaQueries.addEventListener('change', handleViewports);
+        }
+    }
+    customElements.define('menu-button', MenuButton);
 </script>
 
 <style>
