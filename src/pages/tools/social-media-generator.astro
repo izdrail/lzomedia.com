@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import Hero from '../../components/Hero.astro';
+import SocialMediaGenerator from '../../vue/SocialMediaGenerator.vue';
+
+---
+
+<meta property="og:type" content="product">
+<meta property="og:title" content="Generate social media posts using the power of AI - Free tools - Lzo Media">
+<meta property="og:url" content="https://dev.lzomedia-com.pages.dev/tools/trending-now/">
+<meta property="og:image" content="https://i.imgur.com/j6PglyK.png">
+<meta property="og:description" content="Discover what is trending now on the web, media, and news">
+<meta property="product:plural_title" content="">
+<meta property="product:price.amount" content="0">
+<meta property="product:price.currency" content="GBP">
+<meta name="author" content="Stefan ♥">
+
+
+
+<BaseLayout
+	title="Generate social media posts using the power of AI - Free tools - Lzo Media"
+	description="Use our free tools to generate social media posts using the power of AI. Get trending topics, hashtags, and more.">
+
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-12">
+			<Hero
+				title="Social Media Generator"
+				tagline="Generate social media posts using the power of AI"
+				align="center"
+			/>
+
+            <p class="text-center">
+                Experience the power of AI-driven content creation! Let our cutting-edge technology craft bespoke posts tailored to your brand, effortlessly blending it into the hottest trending topics. With our solution, you'll effortlessly publish timely, relevant, and captivating content that elevates your brand, ensuring it shines brightly in the spotlight of online conversations!
+
+            </p>
+
+            <SocialMediaGenerator />
+
+        </main>
+	</div>
+</BaseLayout>
