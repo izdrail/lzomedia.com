@@ -16,6 +16,31 @@ import CallToAction from "../components/CallToAction.astro";
                 align="center"
         />
 
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Orpington",
+                    "addressRegion": "London",
+                    "postalCode": "BR54BU",
+                    "streetAddress": "9 Haddon Road"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4",
+                    "reviewCount": "250"
+                },
+                "name": "Free SEO Tools",
+                "openingHours": [
+                    "Mo-Fr 09:00-17:30"
+                ],
+                "priceRange": "$$",
+                "telephone": "(0744) 821-8899",
+                "url": "https://lzomedia.com/tools"
+            }
+        </script>
 
         <!-- SEO Analyzer -->
         <section class="container mt-15 px-6 mx-auto">
@@ -146,8 +171,8 @@ import CallToAction from "../components/CallToAction.astro";
                             This is a free tool that will help you to generate social media posts with personalization and customization.
                         </p>
 
-                        <CallToAction href="#">
-                            Coming Soon
+                        <CallToAction href="/tools/social-media-generator">
+                            Try Now
                             <Icon icon="arrow-right" size="1.2em"/>
                         </CallToAction>
                     </div>
