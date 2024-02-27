@@ -13,13 +13,6 @@
   white-space: nowrap;
 }
 
-.roles {
-  margin-top: 0.5rem;
-  display: flex;
-  max-width: 75vw;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
 </style>
 
 <template>
@@ -59,7 +52,7 @@
 </template>
 
 <script>
-console.log('trending-now.vue')
+console.log('SocialMediaGenerator.vue')
 export default {
   name: 'SocialMediaGenerator',
   data() {
@@ -141,7 +134,7 @@ export default {
   created() {
     console.log('Component mounted.')
     this.getReport();
-
+    this.getNews('trending');
   },
 
   watch: {
