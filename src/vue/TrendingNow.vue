@@ -28,8 +28,8 @@
   </div>
   <div class="roles">
     <div v-for="keyword in response" class="pill">
-      <a class="dark:text-white text-white" :href="`https://news.google.com/search?q=${keyword}&hl=en-GB&gl=GB&ceid=GB:en`" :title="keyword" target="_blank">
-      {{ keyword }}
+      <a class="dark:text-white text-white" :href="`https://news.google.com/search?q=${keyword['keyword']}&hl=en-GB&gl=GB&ceid=GB:en`" :title="keyword" target="_blank">
+      {{ keyword['keyword'] }}
       </a>
     </div>
   </div>
