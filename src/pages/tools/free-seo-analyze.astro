@@ -7,19 +7,16 @@ import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
 ---
 
 
-
-
-
 <meta property="og:type" content="product">
 <meta property="og:title" content="Website Seo Analyzer - Free Tools">
 <meta property="og:url" content="https://lzomedia.com/tools/free-seo-analyze/">
 <meta property="og:image" content="https://i.imgur.com/Dd466rF.jpg">
-<meta property="og:description" content="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool.">
+<meta property="og:description"
+      content="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool.">
 <meta property="product:plural_title" content="">
 <meta property="product:price.amount" content="0">
 <meta property="product:price.currency" content="GBP">
 <meta name="author" content="Stefan ♥">
-
 
 
 <script type="application/ld+json">
@@ -48,45 +45,50 @@ import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
     }
 </script>
 <BaseLayout
-	title="Free Tools - Seo Analyzer"
-	description="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
+        title="Free Tools - Seo Analyzer"
+        description="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-12">
-			<Hero
-				title="Website Seo Analyzer - Free Tools"
-				tagline="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
-				align="center"
-			/>
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-12">
+            <Hero
+                    title="Website Seo Analyzer - Free Tools"
+                    tagline="Get a more in-depth look at your website's SEO. Analyze your website for free with our SEO analyzer tool."
+                    align="center"
+            />
 
-			<SeoAnalyzer client:visible />
+            <SeoAnalyzer client:visible/>
 
-            <img class="banner" src="https://i.imgur.com/Dd466rF.jpg" alt="Website Seo Analyzer - Free Tools" />
+            <img class="banner" src="https://i.imgur.com/Dd466rF.jpg" alt="Website Seo Analyzer - Free Tools"/>
             <!-- About the project sections -->
             <section>
                 <h3>
-                   About Website SEO Analyzer
+                    About Website SEO Analyzer
                 </h3>
                 <div class="text-2xl">
-                     <p>
-                         An SEO tool that analyzes the structure of a site, crawls the site, counts words in the body of the site and warns of any technical SEO issues.
-                     </p>
                     <p>
-                        The tool is designed to help webmasters, marketers and search engine optimization (SEO) specialists to improve their website's visibility in search engine results pages.
+                        <b>Website SEO Analyzer</b> is an advanced tool meticulously designed to dissect the structural
+                        intricacies of websites. By meticulously analyzing the site's architecture, conducting
+                        comprehensive crawls, and meticulously tallying word counts within the site's body, it
+                        effectively identifies and highlights any potential technical <b> SEO impediments</b>.
                     </p>
-
+                    <p>
+                        This innovative tool is crafted with the explicit aim of empowering webmasters, marketers, and
+                        <b>SEO specialists</b> to enhance their website's prominence within search engine result pages (SERPs).
+                    </p>
                 </div>
             </section>
 
             <!--Requirements for running -->
             <section>
                 <h3>
-                    Requirements for running Website SEO Analyzer
+                    Requirements for Running <b>Website SEO Analyzer</b>
                 </h3>
                 <div class="text-2xl">
                     <p>
-                        I've built this tool to showcase my skills in building web applications using the latest technologies like python, fastapi, vuejs, tailwindcss and docker.
+                        This tool is meticulously engineered to exemplify proficiency in developing cutting-edge web applications, harnessing the latest technologies such as Python, FastAPI, Vue.js, Tailwind CSS, and Docker.
                     </p>
+
+                    p
                 </div>
             </section>
 
@@ -94,17 +96,18 @@ import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
             <!-- Run your own section -->
             <section>
                 <h3>
-                    Run your own Website SEO Analyzer
+                    Run Your Own Website SEO Analyzer
                 </h3>
                 <div class="text-2xl">
+<p>
+    In an endeavor to foster collaboration and empower users, the source code of this invaluable tool has been made publicly available. You can effortlessly deploy your personalized instance by adhering to the comprehensive instructions meticulously outlined in the GitHub repository.
+
+</p>
+<p>
+    For optimal convenience and seamless integration, consider running the tool locally on your machine utilizing Docker and Docker Compose:
+</p>
+
                     <p>
-                        I've decided to make the source code of this tool available to the public.
-                        You can run your own instance of the tool by following the instructions on the <a href="https://github.com/cornatul/api.todayintel.com">GitHub repository</a> .
-                    </p>
-                    <p>
-                        Or even better run it on your local machine using docker and docker-compose.
-                    </p>
-                    <p class="mt-5">
                         <code>
                             docker pull cornatul/api.todayintel.com:v1
                         </code>
@@ -118,14 +121,16 @@ import SeoAnalyzer from '../../vue/SeoAnalyzer.vue'
                     Open API Documentation
                 </h3>
                 <div class="text-2xl">
+
                     <p>
-                        The API documentation is available online at the following  <a href="https://api.todayintel.com/docs">address</a> .
+                        Discover comprehensive insights and unleash the full potential of the API through our meticulously curated online documentation, available at this
+                            <a href="https://api.todayintel.com/docs">address</a> .
                     </p>
                 </div>
             </section>
 
             <!-- Seo structured data section -->
 
-		</main>
-	</div>
+        </main>
+    </div>
 </BaseLayout>
