@@ -1,0 +1,40 @@
+---
+import CallToAction from './CallToAction.astro';
+import Icon from './Icon.astro';
+---
+<section class="wrapper stack gap-20 lg:gap-48">
+    <div class="container px-6 py-12 mx-auto">
+        <div>
+            <p class="text-3xl font-medium text-blue-500 dark:text-blue-400 text-center">Contact Me</p>
+
+            <p class="mt-2 text-2xl font-semibold  md:text-3xl dark:text-white text-center">I’d love to hear from you</p>
+
+        </div>
+        <div class="grid grid-cols-1 gap-12 mt-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+
+            <div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
+                <h4 class="text-base font-medium text-gray-800 dark:text-white">Chat to with me</h4>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    Book a 15-minute chat with me to discuss your project.
+                </p>
+                <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                    <!-- Calendly link widget begin -->
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a class="text-blue-500  dark:text-blue-400" title="contact me"  href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cornatul/15min'});return false;">Schedule time with me</a>
+                    <!-- Calendly link widget end -->
+                </p>
+            </div>
+
+            <div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
+                <h4 class="text-base font-medium text-gray-800 dark:text-white">Call me</h4>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
+                <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                    <a title="laravel developer london contact number" class="text-blue-500  dark:text-white" href="tel:+447448218899">+44 (744) 821-8899</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
