@@ -12,16 +12,6 @@ export const collections = {
 		}),
 	}),
 
-    courses: defineCollection({
-        schema: z.object({
-            title: z.string(),
-			image: z.string(),
-			tags: z.array(z.string()),
-            description: z.string(),
-            publishDate: z.coerce.date(),
-        }),
-    }),
-
     services: defineCollection({
         schema: z.object({
             title: z.string(),
