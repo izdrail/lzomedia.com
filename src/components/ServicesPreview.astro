@@ -9,13 +9,12 @@ const { data, slug } = Astro.props.project;
 ---
 
 <a class="card" title={data.title} href={`/services/${slug}`}>
-	<span class="title">
+	<p class="title">
 		{data.title}
-	</span>
-	<small class="inline-block align-middle dark:text-white px-5 py-5">
+	</p>
+	<p class="inline-block align-middle dark:text-white px-5 py-5">
 		{data.description}
-	</small>
-	<img src={data.image} alt={data.title || ''} loading="lazy" decoding="async" />
+	</p>
 </a>
 
 <style>
