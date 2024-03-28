@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { pwaInfo } from 'virtual:pwa-info';
 
 interface Props {
 	title?: string | undefined;
@@ -41,6 +42,8 @@ const {
 	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
 	rel="stylesheet"
 />
+<script src="/src/pwa.ts"></script>
+{ pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
 
 <script is:inline>
 	// This code is inlined in the head to make dark mode instant & blocking.
