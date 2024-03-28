@@ -11,21 +11,19 @@
   },
   "dependencies": {
     "@astrojs/renderer-react": "^0.5.0",
-    "@astrojs/tailwind": "^5.0.2",
-    "@astrojs/vue": "^3.0.4",
-    "astro": "^4",
+    "@astrojs/tailwind": "^5.1",
+    "@astrojs/vue": "^4",
+    "@vite-pwa/astro": "^0.3.1",
+    "astro": "^4.5.8",
     "astro-remote": "^0.2.3",
     "chart.js": "^3.9.1",
     "flowbite": "^2.3.0",
     "flowbite-vue": "^0.1.2",
-    "octokit": "^2.0.14",
+    "octokit": "^3.1.2",
     "tailwindcss": "^3.3.5",
     "uuid": "^9.0.1",
     "vue": "^3.3.8",
     "vue-chart-3": "^3.1.8",
     "vue3-plotly": "^0.0.7"
-  },
-  "devDependencies": {
-    "@vite-pwa/astro": "^0.1.5"
   }
 }
