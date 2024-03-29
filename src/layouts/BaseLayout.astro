@@ -18,9 +18,9 @@ const { title, description } = Astro.props;
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
-
 	</head>
 	<body class="dark:bg-gray-900">
+
 		<div class="stack backgrounds">
 			<Nav />
 			<slot />
@@ -141,7 +141,31 @@ const { title, description } = Astro.props;
 				a.appendChild(r);
 			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "EntertainmentBusiness",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Orpington",
+                    "addressRegion": "London",
+                    "postalCode": "BR54BU",
+                    "streetAddress": "9 Haddon Road"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4",
+                    "reviewCount": "250"
+                },
+                "name": "Senior Software Developer London",
+                "openingHours": [
+                    "Mo-Fr 09:00-17:30"
+                ],
+                "priceRange": "$$",
+                "telephone": "(0744) 821-8899",
+                "url": "https://lzomedia.com/"
+            }
+        </script>
         <ReloadPrompt />
-
     </body>
 </html>

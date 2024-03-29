@@ -8,14 +8,19 @@ interface Props {
     author?: string | undefined;
 	description?: string | undefined;
 }
+const currentPath = Astro.url.pathname;
 
 const {
 	title = 'Senior Software Developer',
     date = new Date(),
     author ='Stefan ♥',
-	description = 'Seeking a senior software developer for hire in London? Look no further! I can bring your web dreams to life #Developer #London #Available #Hire',
+	description = 'Are you seeking a senior software developer for hire in London? Look no further! I can bring your web dreams to life #Developer #London #Available #Hire',
 	logo = '/assets/logo.svg',
+    remote_logo = 'https://raw.githubusercontent.com/saturnphp/logos/main/CornatulLogo-Centered.png',
+    og_url = 'https://lzomedia.com/' + currentPath
 } = Astro.props;
+
+console.log(og_url);
 ---
 
 <title>{title} - LzoMedia.com</title>
@@ -30,10 +35,21 @@ const {
 <meta property="og:title" content={title}>
 <meta property="og:description" content={description}>
 <meta property="og:site_name" content={title}>
-
+<meta property="og:image" content={remote_logo}>
+<meta property="og:url" content={og_url}>
 <meta property="og:article:author" content={author}>
 
 <meta name="publish_date" property="og:publish_date" content={date}>
+
+<meta property="og:type" content="website" />
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@saturnphp" />
+<meta name="twitter:creator" content="@saturnphp" />
+
+
 
 <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
