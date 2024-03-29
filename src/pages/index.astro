@@ -24,34 +24,9 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "EntertainmentBusiness",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Orpington",
-                "addressRegion": "London",
-                "postalCode": "BR54BU",
-                "streetAddress": "9 Haddon Road"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4",
-                "reviewCount": "250"
-            },
-            "name": "Senior Software Developer London - Lzo Media",
-            "openingHours": [
-                "Mo-Fr 09:00-17:30"
-            ],
-            "priceRange": "$$",
-            "telephone": "(0744) 821-8899",
-            "url": "https://lzomedia.com/"
-        }
-    </script>
+
     <main>
         <section class="wrapper stack gap-20 lg:gap-48">
-
             <header class="hero">
                 <Hero
                         title="Senior Software Developer "
@@ -104,56 +79,42 @@ const projects = (await getCollection('work'))
                         src="https://i.imgur.com/z5PUMhV.jpeg"
                 />
             </header>
-
-            <section class="section with-background bg-variant">
-                <header class="section-header stack gap-2 lg:gap-4">
+            <div class="with-background bg-variant">
+                <header class="section-header stack gap-y-20 lg:gap-4">
                     <h2 title="Senior PHP Developer">
-                        Senior Developer London
+                        Technologies
                     </h2>
                     <p>
-                        I'm a <b>senior software developer</b> with over 13 years of experience in <i>software development</i>. I'm
-                        available for hire on a freelance basis, and I'm always interested in hearing about new
-                        opportunities.
+                        Some of the technologies I use in my daily activities
                     </p>
                 </header>
 
-                <div class="gallery">
-                    <Grid variant="small">
-                        {
-                            ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan', "LLM's"].map((brand) => (
-                                    <li class="mention-card">
-                                        <h3 title={brand + ' developer london available for hire'}>{brand}</h3>
-                                        <p class="appearance-none">
-                                            I'm a {brand} developer based in London, UK. I'm available for hire on a
-                                            freelance basis, and I'm always interested in hearing about new opportunities.
-                                        </p>
-                                    </li>
-                            ))
-                        }
-                    </Grid>
-                </div>
-            </section>
 
+                <main class="grid grid-cols-5 gap-7">
+                    {
+                        ['PHP', 'Python', 'Laravel', 'Symfony', 'FastAPI', 'React', 'VueS', 'Ionic', 'Wordpress', 'DevOps', 'IOT', 'Arduino', 'LoraWan', "LLM's"].map((brand) => (
+                                <div class="mention-card">
+                                    <h3 title={brand + ' developer london available for hire'}>{brand}</h3>
+                                    <p class="appearance-none">
+
+                                    </p>
+                                </div>
+                        ))
+                    }
+                </main>
+
+            </div>
             <Skills/>
-
         </section>
         <section class="wrapper mt-20 mb-10 stack gap-20 lg:gap-48">
             <div class="section with-background with-cta">
-                <header class="section-header stack stack lg:gap-20 ">
-                    <h3 title="my work as a php developer">My Work</h3>
-                    <p>Take a look below at some of my featured work for clients from the past few years.</p>
+                <header class="section-header stack lg:gap-20 ">
+                    <h3 title="my work as a php developer">Works</h3>
+                    <p>
+                        You can take a look bellow to some of projects that I've done in the past or see what I'm
+                        currently cracking own
+                    </p>
                 </header>
-                <div class="gallery">
-                    <Grid variant="offset">
-                        {
-                            projects.map((project) => (
-                                    <li>
-                                        <PortfolioPreview project={project}/>
-                                    </li>
-                            ))
-                        }
-                    </Grid>
-                </div>
                 <div class="cta">
                     <CallToAction title="laravel developer my works" href="/work/">
                         View All
@@ -162,35 +123,52 @@ const projects = (await getCollection('work'))
                 </div>
             </div>
         </section>
+
+        <section class="wrapper stack gap-20 lg:gap-48">
+
+            <div class="grid grid-cols-2 gap-7">
+                {
+                    projects.map((project) => (
+                            <PortfolioPreview project={project}/>
+                    ))
+                }
+            </div>
+        </section>
         <section class="wrapper stack gap-20 lg:gap-48">
             <div class="container px-6 py-12 mx-auto">
                 <div>
                     <p class="text-3xl font-medium text-blue-500 dark:text-blue-400 text-center">Contact Me</p>
 
-                    <p class="mt-2 text-2xl font-semibold  md:text-3xl dark:text-white text-center">I’d love to hear from you</p>
+                    <p class="mt-2 text-2xl   md:text-3xl dark:text-white text-center">
+                        I’d love to hear from you
+                    </p>
 
                 </div>
                 <div class="grid grid-cols-1 gap-12 mt-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
 
-                    <div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
-                        <h4 class="text-base font-medium text-gray-800 dark:text-white">Chat to with me</h4>
-                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    <div class="p-4 rounded-lg md:p-6 dark:bg-gray-800">
+                        <p class="text-base font-medium  ">Video Meeting</p>
+                        <p class="mt-2 text-sm">
                             Book a 15-minute chat with me to discuss your project.
                         </p>
                         <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
                             <!-- Calendly link widget begin -->
                             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                            <a class="text-blue-500  dark:text-blue-400" title="contact me"  href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cornatul/15min'});return false;">Schedule time with me</a>
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
+                                    async></script>
+                            <a class="text-blue-500  dark:text-blue-400" title="contact me" href="#"
+                               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cornatul/15min'});return false;">Schedule
+                                time with me</a>
                             <!-- Calendly link widget end -->
                         </p>
                     </div>
 
-                    <div class="p-4 rounded-lg bg-blue-50 md:p-6 dark:bg-gray-800">
-                        <h4 class="text-base font-medium text-gray-800 dark:text-white">Call me</h4>
-                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
-                        <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
-                            <a title="laravel developer london contact number" class="text-blue-500  dark:text-white" href="tel:+447448218899">+44 (744) 821-8899</a>
+                    <div class="p-4 rounded-lg md:p-6">
+                        <p class="text-base font-medium ">Call me</p>
+                        <p class="mt-2 text-sm ">Mon-Fri from 8am to 5pm.</p>
+                        <p class="mt-2 text-sm  dark:text-blue-400">
+                            <a title="laravel developer london contact number" class="text-blue-500  dark:text-white"
+                               href="tel:+447448218899">+44 (744) 821-8899</a>
                         </p>
                     </div>
                 </div>
@@ -277,7 +255,7 @@ const projects = (await getCollection('work'))
     .section-header {
         justify-self: center;
         text-align: center;
-        max-width: 75ch;
+margin-bottom: 2vh;
         font-size: var(--text-md);
         color: var(--gray-300);
     }
@@ -342,8 +320,5 @@ const projects = (await getCollection('work'))
         }
     }
 
-    .appearance-none {
-        appearance: none;
-        display: none;
-    }
+
 </style>

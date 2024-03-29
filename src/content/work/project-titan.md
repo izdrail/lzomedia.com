@@ -1,10 +1,10 @@
 ---
-title: Today Intel - Find the latest trends on social media
+title: Project Titan
 publishDate: 2020-03-02 00:00:00
 img: https://i.imgur.com/QrnTmX9.png
 img_alt: today intel
 description: |
-  Today Intel is a web application that allows you to find the latest trends on social media. 
+  Open source community with AI Powers
 tags:
   - Laravel
   - Fast Api

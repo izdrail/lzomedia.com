@@ -1,5 +1,5 @@
 ---
-title: Free Stuff UK App
+title: Free Stuff
 publishDate: 2019-12-01 00:00:00
 img: https://i.imgur.com/rawjBg4.png
 img_alt: free stuff uk app
