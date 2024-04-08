@@ -5,7 +5,13 @@ import vue from "@astrojs/vue";
 import AstroPWA from '@vite-pwa/astro'
 
 export default defineConfig({
-  integrations: [tailwind(),vue(),AstroPWA()],
+  integrations: [tailwind(),vue(),
+      AstroPWA({
+          experimental: {
+              directoryAndTrailingSlashHandler: true,
+          }
+      })
+  ],
   buildOptions: {
     outdir: 'dist',
     emptyOutDir: true,
