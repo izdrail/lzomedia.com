@@ -1,10 +1,10 @@
 ---
-title: Today Intel
+title: API TodayIntel
 publishDate: 2024-03-02 00:00:00
 img: https://i.imgur.com/98wN3R6.png
 img_alt: today intel
 description: |
-  The API is designed to provide various functionalities related to News, Trends, Article Summarization
+  The API is designed to provide various functionalities related to news, SEO analysis, NLP, videos, and more.
 tags:
   - Python
   - Fast Api
@@ -16,7 +16,7 @@ tags:
 
 # Today Intel API Documentation
 
-This repository contains the API documentation for the Today Intel App.
+This repository contains the API documentation for the Today Intel app.
 The API is designed to provide various functionalities related to news, SEO analysis, NLP, videos, and more.
 
 ## Table of Contents

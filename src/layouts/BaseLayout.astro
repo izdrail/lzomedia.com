@@ -18,6 +18,9 @@ const { title, description } = Astro.props;
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
+		<link href="https://fonts.cdnfonts.com/css/terminal" rel="stylesheet">
+
+
 	</head>
 	<body class="dark:bg-gray-900">
 
@@ -28,12 +31,13 @@ const { title, description } = Astro.props;
 		</div>
 
 		<script>
-			// Add “loaded” class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
 		</script>
 
 		<style>
 			:root {
+
+
 				--_placeholder-bg: linear-gradient(transparent, transparent);
 				--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
 				--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
