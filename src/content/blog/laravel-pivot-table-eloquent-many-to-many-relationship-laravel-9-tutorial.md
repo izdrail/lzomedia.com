@@ -3,8 +3,7 @@ title: Laravel Pivot Table | Eloquent Many To Many Relationship | Laravel 9 Tuto
 publishDate: 2024-05-24
 img: https://i.imgur.com/98wN3R6.png
 img_alt: How to structure a server-side application
-description: |
-Learn how to structure a server-side application for optimal performance and maintainability.
+description: notif
 tags:
 - Server-Side Application
 - Laravel
