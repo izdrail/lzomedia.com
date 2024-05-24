@@ -9,11 +9,14 @@ import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
 
 interface Props {
-	entry: CollectionEntry<'courses'>;
+	entry: CollectionEntry<'work'>;
 }
 
+// This is a dynamic route that generates a page for every Markdown file in src/content/
+// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
+// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const work = await getCollection('courses');
+	const work = await getCollection('work');
 	return work.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry },
@@ -22,25 +25,14 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const schema = {
-    "@context": "https://schema.org/",
-    "@type": "Course",
-    "name": entry.data.title,
-    "description": entry.data.description,
-    "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": ["MOOC","online"],
-        "endDate": "2019-03-21",
-        "startDate": "2019-02-15"
-    }
-};
 ---
+
 <BaseLayout title={entry.data.title} description={entry.data.description}>
 	<div class="stack gap-20">
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/courses/"><Icon icon="arrow-left" /> Courses</a>
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
@@ -51,7 +43,7 @@ const schema = {
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="">
+				<div class="stack ">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content text-xl">
 						<Content />
@@ -59,12 +51,6 @@ const schema = {
 				</div>
 			</main>
 		</div>
-
-        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-
-
-
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -99,7 +85,7 @@ const schema = {
 	}
 
 	.content {
-		max-width: 65ch;
+		max-width: 75ch;
 		margin-inline: auto;
 	}
 

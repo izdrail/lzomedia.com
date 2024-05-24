@@ -1,5 +1,5 @@
 ---
-title: Drupal Development Company
+title: Drupal Development Company, London
 publishDate: 2023-19-04 00:00:00
 description: |
   Welcome to my premier Drupal development company based in London, UK. I specialize in delivering top-notch Drupal solutions tailored to meet the unique needs of businesses across various industries.
@@ -12,9 +12,12 @@ tags:
 ---
 # My Drupal Development Company
 
-Welcome to my premier [Drupal development company](https://lzomedia.com) based in the vibrant city of London, United Kingdom.
-I am committed to delivering top-notch Drupal solutions tailored to meet the unique needs of businesses across various industries.
-With a solid foundation built on expertise, innovation, and dedication, I strive to be your trusted partner in realizing your digital ambitions.
+Welcome to my premier [Drupal development company](https://lzomedia.com) based in the vibrant city of **London**,
+United Kingdom.
+I am committed
+to delivering top-notch Drupal solutions tailored to meet the unique needs of businesses across various industries.
+With a solid foundation built on expertise, innovation, and dedication,
+I strive to be your trusted partner in realizing your digital ambitions.
 
 ## Who is Behind the Company?
 

@@ -1,5 +1,5 @@
 ---
-title: WordPress Development Company
+title: WordPress Development Company, London
 publishDate: 2023-19-04 00:00:00
 description: |
   Welcome to my premier WordPress development company based in London, UK. I specialize in delivering top-notch WordPress solutions tailored to meet the unique needs of businesses across various industries.
