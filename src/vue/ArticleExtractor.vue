@@ -23,6 +23,7 @@
         </div>
       </div>
     </div>
+
     <div v-if="loading" class="loading">
       <svg
           version="1.1"
@@ -83,7 +84,7 @@
       </div>
       <div v-if="response.article.banner" class="mb-10">
         <label for="title" class="block text-2xl mb-2">Banner</label>
-        <img :src="response.article.banner" class="w-full h-full gap-10 text-black ">
+        <img :src="response.article.banner" class="w-full h-full gap-10 text-black " alt="image">
       </div>
       <div v-if="response.article.banner" class="mb-10">
         <label for="title" class="block text-2xl mb-2">Banner</label>
@@ -93,11 +94,17 @@
         <label for="title" class="block text-2xl mb-2">Answer</label>
         <v-md-editor v-model="response.answer.response" height="400px" class="w-full h-full gap-10 text-black text-2xl mb-10"></v-md-editor>
       </div>
-
-     <div v-if="response.article.markdown" class="mb-10">
+      <div v-if="response.article.markdown" class="mb-10">
        <label for="title" class="block text-2xl mb-2">Original Article</label>
        <v-md-editor v-model="response.article.markdown" height="400px" class="w-full h-full gap-10 text-black text-2xl mb-10"></v-md-editor>
      </div>
+      <div v-if="response.article.tags" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Tags</label>
+        <input type="text" v-model="response.article.tags" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
+      <div v-if="response.article.title" class="mb-10 cta">
+        <button type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400" @click="publishArticle">Publish</button>
+      </div>
     </div>
   </section>
 </template>
