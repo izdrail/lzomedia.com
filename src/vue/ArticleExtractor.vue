@@ -8,14 +8,14 @@
             <div class="flex flex-col">
               <label for="link" class="hidden">Article Url</label>
               <input v-model="link" type="url" name="link" id="link" placeholder="https://"
-                     class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0">
+                     class="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-white focus:outline-none focus:placeholder-transparent focus:ring-0">
             </div>
             <button type="submit"
                     class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400">
                     <span v-if="loading">
                       Loading...
                     </span>
-                    <span v-else>
+              <span v-else>
                       Submit
                     </span>
             </button>
@@ -23,6 +23,7 @@
         </div>
       </div>
     </div>
+
     <div v-if="loading" class="loading">
       <svg
           version="1.1"
@@ -59,7 +60,7 @@
               keySplines="0.4, 0, 0.2, 1"
               keyTimes="0;1"
               dur="2s"
-              repeatCount="indefinite" />
+              repeatCount="indefinite"/>
         </path>
 
         <path fill="#859900" stroke="#859900" stroke-width="0.2027" stroke-miterlimit="10" d="M7.078,20
@@ -71,16 +72,39 @@
               from="0 20 20"
               to="360 20 20"
               dur="1.8s"
-              repeatCount="indefinite" />
+              repeatCount="indefinite"/>
         </path>
       </svg>
     </div>
 
-    <div class="container px-6 mx-auto mb-3">
-      {{response.summary}}
-    </div>
-    <div class="container px-6 mx-auto mb-3">
-      <div v-html="response.spacy"></div>
+    <div v-else class="container px-6 mx-auto mb-3">
+      <div v-if="response.article.title" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Title</label>
+        <input type="text" v-model="response.article.title" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
+      <div v-if="response.article.banner" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Banner</label>
+        <img :src="response.article.banner" class="w-full h-full gap-10 text-black " alt="image">
+      </div>
+      <div v-if="response.article.banner" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Banner</label>
+        <input type="text" v-model="response.article.banner" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
+      <div v-if="response.answer.response" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Answer</label>
+        <v-md-editor v-model="response.answer.response" height="400px" class="w-full h-full gap-10 text-black text-2xl mb-10"></v-md-editor>
+      </div>
+      <div v-if="response.article.markdown" class="mb-10">
+       <label for="title" class="block text-2xl mb-2">Original Article</label>
+       <v-md-editor v-model="response.article.markdown" height="400px" class="w-full h-full gap-10 text-black text-2xl mb-10"></v-md-editor>
+     </div>
+      <div v-if="response.article.tags" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Tags</label>
+        <input type="text" v-model="response.article.tags" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
+      <div v-if="response.article.title" class="mb-10 cta">
+        <button type="button" class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400" @click="publishArticle">Publish</button>
+      </div>
     </div>
   </section>
 </template>
@@ -94,9 +118,25 @@
 
 <script>
 console.log('seo-analyzer.vue')
+import VMdEditor from '@kangc/v-md-editor';
+import '@kangc/v-md-editor/lib/style/base-editor.css';
+import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
+import '@kangc/v-md-editor/lib/theme/style/vuepress.css';
+
+// Prism
+import Prism from 'prismjs';
+// highlight code
+import 'prismjs/components/prism-json';
+
+VMdEditor.use(vuepressTheme, {
+  Prism,
+});
 
 export default {
   name: 'ArticleExtractor',
+  components: {
+    VMdEditor,
+  },
   data() {
     return {
       title: 'SEO Analyzer',
@@ -104,8 +144,14 @@ export default {
       loading: false,
       link: '',
       response: {
-        summary: '',
-        spacy: '',
+        article: {
+          title: '',
+          summary: '',
+          markdown: '',
+        },
+        answer: {
+          response: '',
+        },
       },
     }
   },
@@ -114,23 +160,62 @@ export default {
       // Show loading icon
       this.loading = true;
       // Make API call
-          fetch(`https://api.todayintel.com/nlp/article`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              link: this.link,
-            }),
-          })
+      fetch(`https://automation.todayintel.com/api/extract`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          link: this.link,
+        }),
+      })
           .then(response => response.json())
           .then(response => {
-            this.response = response.data;
+            this.response = response;
+
+            console.log(this.response);
+
+            this.loading = false;
+            this.title = title;
+
+
             this.loading = false;
           })
           .catch(error => {
             console.log(error);
+            this.loading = false;
+          });
+    },
+    publishArticle() {
+      // Show loading icon
+      this.loading = true;
+      // Make API call
+      fetch(`https://automation.todayintel.com/api/publish`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          link: this.link,
+          title: this.response.article.title,
+          summary: this.response.answer.response,
+          markdown: this.response.article.markdown,
+        }),
+      })
+          .then(response => response.json())
+          .then(response => {
+            this.response = response;
 
+            console.log(this.response);
+
+            this.loading = false;
+            this.title = title;
+
+
+            this.loading = false;
+          })
+          .catch(error => {
+            console.log(error);
             this.loading = false;
           });
     },
