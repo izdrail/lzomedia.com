@@ -2,7 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 import Hero from '../../components/Hero.astro';
-import SocialMediaGenerator from '../../vue/SocialMediaGenerator.vue';
+import EmailGeneratorApp from '../../vue/EmailGeneratorApp.vue';
+
 
 ---
 
@@ -25,17 +26,16 @@ import SocialMediaGenerator from '../../vue/SocialMediaGenerator.vue';
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-12">
 			<Hero
-				title="Social Media Generator"
-				tagline="Generate social media posts using the power of AI"
+				title="Email Generator"
+				tagline="Generate catching and engaging email content using AI"
 				align="center"
 			/>
 
             <p class="text-center">
                 Experience the power of AI-driven content creation! Let our cutting-edge technology craft bespoke posts tailored to your brand, effortlessly blending it into the hottest trending topics. With our solution, you'll effortlessly publish timely, relevant, and captivating content that elevates your brand, ensuring it shines brightly in the spotlight of online conversations!
-
             </p>
 
-            <SocialMediaGenerator />
+            <EmailGeneratorApp />
 
         </main>
 	</div>
