@@ -86,6 +86,10 @@
         <label for="title" class="block text-2xl mb-2">Title</label>
         <input type="text" v-model="response.article.title" class="w-full h-full gap-10 text-2xl text-black ">
       </div>
+      <div v-if="response.article.link" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Source</label>
+        <input type="url" v-model="response.article.link" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
       <div v-if="response.article.banner" class="mb-10">
         <label for="title" class="block text-2xl mb-2">Banner</label>
         <img :src="response.article.banner" class="w-full h-full gap-10 text-black " alt="image">
@@ -152,6 +156,7 @@ export default {
       response: {
         article: {
           title: '',
+          link: '',
           banner: '',
           summary: '',
           markdown: '',
@@ -186,13 +191,14 @@ export default {
           .catch(error => {
             console.log(error);
             this.loading = false;
+            //todo show error
           });
     },
     publishArticle() {
       // Show loading icon
       this.loading = true;
       // Make API call
-      fetch(`https://automation.todayintel.com/api/publish`, {
+      fetch(`http://localhost:8004/api/publish`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
