@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container px-6 py-16 mx-auto text-center">
+    <div class="container px-6 py-6 mx-auto text-center">
       <div class="max-w-lg mx-auto">
         <div
             class="w-full max-w-sm mx-auto mt-6 bg-transparent border rounded-md dark:border-gray-700 focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 dark:focus-within:border-blue-300 focus-within:ring-opacity-40">
@@ -78,9 +78,17 @@
     </div>
 
     <div v-else class="container px-6 mx-auto mb-3">
+      <div v-if="showWorkflow" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Workflow</label>
+        <input type="text" v-model="workflow" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
       <div v-if="response.article.title" class="mb-10">
         <label for="title" class="block text-2xl mb-2">Title</label>
         <input type="text" v-model="response.article.title" class="w-full h-full gap-10 text-2xl text-black ">
+      </div>
+      <div v-if="response.article.link" class="mb-10">
+        <label for="title" class="block text-2xl mb-2">Source</label>
+        <input type="url" v-model="response.article.link" class="w-full h-full gap-10 text-2xl text-black ">
       </div>
       <div v-if="response.article.banner" class="mb-10">
         <label for="title" class="block text-2xl mb-2">Banner</label>
@@ -143,9 +151,13 @@ export default {
       subtitle: 'Get a more detail SEO report for your website by contacting me directly or setup a meeting.',
       loading: false,
       link: '',
+      workflow: 'https://automation.lzomedia.com/api/v1/webhooks/agpLuXOtezPpAxykB97Dj',
+      showWorkflow: false,
       response: {
         article: {
           title: '',
+          link: '',
+          banner: '',
           summary: '',
           markdown: '',
         },
@@ -172,51 +184,45 @@ export default {
           .then(response => response.json())
           .then(response => {
             this.response = response;
-
+            this.showWorkflow = true;
             console.log(this.response);
-
-            this.loading = false;
-            this.title = title;
-
-
             this.loading = false;
           })
           .catch(error => {
             console.log(error);
             this.loading = false;
+            //todo show error
           });
     },
     publishArticle() {
       // Show loading icon
       this.loading = true;
       // Make API call
-      fetch(`https://automation.todayintel.com/api/publish`, {
+      fetch(`http://localhost:8004/api/publish`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          link: this.link,
           title: this.response.article.title,
-          summary: this.response.answer.response,
+          link: this.link,
+          banner: this.banner,
+          summary: this.response.article.summary,
           markdown: this.response.article.markdown,
+          answer: this.response.answer.response,
+          workflow: this.workflow,
         }),
       })
           .then(response => response.json())
           .then(response => {
             this.response = response;
-
             console.log(this.response);
-
-            this.loading = false;
-            this.title = title;
-
-
             this.loading = false;
           })
           .catch(error => {
             console.log(error);
             this.loading = false;
+
           });
     },
   },
