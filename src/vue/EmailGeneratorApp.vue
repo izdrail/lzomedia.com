@@ -19,7 +19,7 @@
   <form>
     <div class="w-full rounded-lg">
       <div class="flex justify-between p-4 ">
-        <v-md-editor v-model="information" height="100vh" class="block w-full border"></v-md-editor>
+        <textarea v-model="information" height="100vh" class="block w-full border text-black" style="min-height: 35vh"></textarea>
       </div>
 
       <div class="flex justify-between p-4 ">
