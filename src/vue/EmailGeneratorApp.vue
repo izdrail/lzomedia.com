@@ -138,7 +138,7 @@ export default {
           .catch(error => {
             console.log(error);
             this.loading = false;
-            //todo show error
+            this.response = error.message;
           });
     },
   },
