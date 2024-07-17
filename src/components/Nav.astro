@@ -5,28 +5,29 @@ import ThemeToggle from './ThemeToggle.astro';
 /** Main menu items */
 const textLinks: { label: string; href: string, title:string }[] = [
 	{ label: 'Home', href: '/', title: "Senior software developer" },
+    { label: 'Leads', href: '/leads/', title: "Free Marketing Leads" },
     { label: 'Tools', href: '/tools/', title: "Free Seo Tools" },
+    { label: 'Works', href: '/works/', title: "My Works as a Senior Software Developer" },
 	{ label: 'About', href: '/about/', title: "About me as a senior software developer"},
 	{ label: 'Blog', href: '/blog/', title: "My thoughts on laravel developing" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
-	{ label: 'LinkedIn', href: 'https://hub.docker.com/gumbophp', icon: 'docker-logo' },
-	{ label: 'LinkedIn', href: 'https://linkedin.com/in/gumbophp', icon: 'linkedin-logo' },
-	{ label: 'LinkedIn', href: 'https://linkedin.com/in/gumbophp', icon: 'linkedin-logo' },
-	{ label: 'Twitter', href: 'https://twitter.com/gumbophp', icon: 'twitter-logo' },
-	{ label: 'GitHub', href: 'https://github.com/gumbophp', icon: 'github-logo' },
-	{ label: 'Twitch', href: 'https://twitch.tv/gumbophp', icon: 'twitch-logo' },
-	{ label: 'YouTube', href: 'https://www.youtube.com/@gumbophp', icon: 'youtube-logo' },
+	{ label: 'Docker', href: 'https://hub.docker.com/gumbophp', icon: 'docker-logo' },
+	{ label: 'LinkedIn', href: 'https://linkedin.com/in/jumbophp', icon: 'linkedin-logo' },
+	{ label: 'Twitter', href: 'https://twitter.com/jumbophp', icon: 'twitter-logo' },
+	{ label: 'GitHub', href: 'https://github.com/jumbophp', icon: 'github-logo' },
+	{ label: 'Twitch', href: 'https://twitch.tv/jumbophp', icon: 'twitch-logo' },
+	{ label: 'YouTube', href: 'https://www.youtube.com/@jumbophp', icon: 'youtube-logo' },
 ];
 ---
 
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			<span class="site-name">Lzo Media &hearts;</span>
+			<Icon icon="rocket-launch" color="var(--accent-regular)" size="1.6em" gradient />
+			<span class="site-name">JumboPHP &heartsuit;</span>
 		</a>
 		<menu-button>
 			<template>

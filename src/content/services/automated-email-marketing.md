@@ -3,7 +3,7 @@ title: Automated Email Marketing - Free Automated Email Marketing Platform
 publishDate: 2023-19-04 00:00:00
 description: |
   Automated Email Marketing is a free automated email marketing platform that helps you create and send professional-looking emails to your subscribers.
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Drupal_logo_-_gray.png/640px-Drupal_logo_-_gray.png
+image: https://www.drupal.org/files/Wordmark_blue_RGB.png
 tags:
   - Marketing
   - Email Marketing
@@ -39,7 +39,7 @@ Get in touch with us today to discuss your project requirements and receive a pe
 We're here to turn your digital vision into reality.
 
 - **Name:** Stefan
-- **Email:** stefan@LZOMedia.com
+- **Email:** stefan@jumbophp.com
 - **Location:** London, United Kingdom
 
-Let's build something extraordinary together!
+# Let's build something extraordinary together!
