@@ -22,10 +22,23 @@ import Grid from '../components/Grid.astro';
 				tagline="You can reach out to me at any time to discuss your project or to ask any questions you may have."
 				align="start"
 			/>
-			<Grid variant="offset">
 
-			</Grid>
+
+			<!-- Contact Form -->
+			<section class="container px-6 mx-auto">
+				<h2 class="text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl">
+					<a title="Contact me" href="/contact" class="dark:text-white hover:text-blue-500">
+						Contact me
+					</a>
+				</h2>
+				<p class="mt-3 text-xl font-semibold mb-6 dark:text-white">
+					You can reach out to me at any time to discuss your project or to ask any questions you may have.
+				</p>
+				<div class="cta">
+					<ContactCTA />
+				</div>
+			</section>
+
 		</main>
-		<ContactCTA />
 	</div>
 </BaseLayout>

@@ -1,0 +1,4 @@
+# Redirect all requests to https://izdrail.com
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://izdrail.com/$1 [R=301,L]

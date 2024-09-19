@@ -1,0 +1,22 @@
+---
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import LeadsApp from '../../vue/LeadsApp.vue';
+
+---
+
+<BaseLayout
+	title="Leads"
+	description="Search for the best marketing leads to help you grow your business."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Free Marketing Leads"
+				tagline="Search for the best marketing leads to help you grow your business."
+			/>
+			<LeadsApp client:load />
+		</main>
+	</div>
+</BaseLayout>
